@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Academy: Глейси. Каталог товаров</title>
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="container">
+				<div class="header-logo">
+					<a href="index.html">
+						<img src="logo.jpg" width="200" height="100" alt="GllacyShop">
+					</a>
+				</div>
+			
+				<nav class="main-navigation">
+					<ul>
+						<li>
+							<a href="#">Каталог</a>
+						</li>
+						<li>
+							<a href="#">Доставка и оплата</a>
+						</li>
+						<li>
+							<a href="#">О Компании</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="user-block">  <!--списком c сылками или просто ссылки?!!!-->
+						<ul>
+							<li>
+								<a href="#">ПОИСК</a>
+							</li>
+							<li>
+								<a href="#">Вход</a>
+							</li>
+							<li>
+								<a href="#">2 товара</a>
+							</li>
+						</ul>
+					</div>
+				<div class=""> <!-- название класса?!!!!! див ли 
+				то вообще?-->
+						С 10 до 20, ежедневно <br>
+						8 812 450-25-25
+				</div>
+			</div>
+		</header>	
+		<main class="catalog">
+			<div class="breadcrumbs">
+				<a href="index.html">Главная</a>
+				<a href="#">Каталог</a>
+				<a href="#">Сливочное</a>
+			</div>
+			<h1>Сливочное мороженое</h1>
+			<div class="main-sorting"> <!-- сортировка форма-->
+				<form action="" method="post">
+					<label for="sorting">Сортировка:</label>
+					<select name="sorting" id="sorting">
+						<option value="popular">по популярности</option>
+						<option value="cheap-first">сначала недорогие</option>
+						<option value="cheap-last">сначала дорогие</option>
+						<option value="fat">по жирности</option>
+					</select>
+					<br> <!-- временно  -->
+
+					<label for="price">Цена: 100 руб. - 500 руб.</label>
+					<input type="range" name="price" id="price" min="100" max="500" step="1">
+					<br> <!-- временно  -->
+
+					Жирность: <!-- не понимаю в какой тег засунуть и как ставить id если это вообще так делается-->
+					<label>
+						<input type="radio" name="fat" value="0%"> 0%
+					</label>
+					<label>
+						<input type="radio" name="fat" value="10%" checked> до 10%
+					</label>
+					<label>
+						<input type="radio" name="fat" value="30%"> до 30%
+					</label>
+					<label>
+						<input type="radio" name="fat" value="30%+"> выше 30%
+					</label>
+					<br> <!-- временно  -->
+
+					Наполнители: <!-- не понимаю в какой тег засунуть и как ставить id если это вообще так делается-->
+					<input type="checkbox" name="fill1" id="fill1" checked>
+					<label for="" ="fill1">шоколадные</label> 
+					<input type="checkbox" name="fill2" id="fill2" checked>
+					<label for="fill2">сахарные присыпки</label>
+					<input type="checkbox" name="fill3" id="fill3">
+					<label for="fill3">фрукты</label> 
+					<input type="checkbox" name="fill4" id="fill4">
+					<label for="fill4">сиропы</label> 
+					<input type="checkbox" name="fill5" id="fill5">
+					<label for="fill5">джемы</label> 
+					<br><!-- временно  -->
+					<input class="btn" type="submit" name="btn" value="Применить">
+				</form>
+			</div>
+			<section class="catalog-items">  <!-- делать ли списком? или оборачивать в дивы? мой мозг утёк -->
+				<ul>
+					<li>  <!-- полагаю, что карточки товаров нужно заменить на <section>  но как грамотно это сделать? -->
+						<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+					</li>
+					<li>
+						<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+					</li>
+					<li>	
+						<a href="#">Сливочно-клубничное с присыпкой из белого шоколада<</a>
+					</li>
+					<li>
+						<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+					</li>
+					<li>
+						<a href="#">Сливочное с брусничным джемом</a>
+					</li>
+					<li>
+						<a href="#">Сливочно-черничное с цельными ягодами</a>
+					</li>
+					<li>
+						<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+					</li>
+					<li>
+						<a href="#">Сливочное с шоколадной стружкой</a>
+					</li>
+					<li>
+						<a href="#">Сливочно-ванильное с кусочками шоколада</a>
+					</li>
+					<li>
+						<a href="#">Сливочное с ментоловым сиропом</a>
+					</li>
+					<li>
+						<a href="#">Сливочное с кусочками черного шоколада</a>
+					</li>
+					<li>
+						<a href="#">Сливочное с мятным сиропом</a>
+					</li>
+				</ul>
+			</section>
+			<div class="catalog-navigation">
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+			</div>
+		</main>	
+		<footer class="page-footer">
+			<div class="container">
+					<div class="footer-social">
+						<a href="#" class="social-btn social-btn-tw">Твиттер</a>
+						<a href="#" class="social-btn social-btn-ig">Инстаграм</a>
+						<a href="#" class="social-btn social-btn-fb">Фейсбук</a>
+						<a href="#" class="social-btn social-btn-vk">Вконтакте</a>
+					</div>
+					
+					<div class="footer-info">
+						<ul>
+							<li>
+								<a href="#">Для поставщиков</a>
+							</li>
+							<li>
+								<a href="#">О производстве</a>
+							</li>
+							<li>
+								<a href="#">Наши документы</a>
+							</li>
+							<li>
+								<a href="#">Экологические стандарты</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="footer-copyright">
+						Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017
+					</div>
+				</div>	
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>
