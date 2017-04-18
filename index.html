@@ -3,21 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <input type="radio" id="btn-1" name="toggle" checked>
+    <input type="radio" id="btn-2" name="toggle">
+    <input type="radio" id="btn-3" name="toggle">
     <div class="container">
       <header class="page-header">
         <div class="header-logo">
-          <img src="logo.jpg" width="200" height="100" alt="GllacyShop">
+          <img src="img/logo.jpg" width="200" height="100" alt="GllacyShop">
         </div>
-        
+
         <nav class="main-navigation">
           <ul>
             <li>
               <a href="#">Каталог</a>
               <ul>
-                <li><a href="#"><b>Новинки</b></a></li>			
+                <li><a href="#"><b>Новинки</b></a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лёд</a></li>
@@ -33,22 +36,24 @@
           </ul>
         </nav>
 
-        <div class="user-block">  
+        <div class="user-block">
           <ul>
             <li>
               <a href="#">ПОИСК</a>
               <form action="#" method="get">
                 <input type="search" name="search" placeholder="Что ищем?">
-              </form>  
+              </form>
             </li>
             <li>
               <a href="#">Вход</a>
-              <form action="#" method="get">
+              <form action="#" method="post"> 
                 <input type="email" name="email" autocomplete="on" placeholder="Электронная почта">
                 <input type="password" name="password" placeholder="Пароль">
                 <input type="submit" value="Войти">
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
+                <div>
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </div>
               </form>
             </li>
             <li>
@@ -58,7 +63,7 @@
         </div>
 
         <div class="header-contacts">
-          с 10 до 20, ежедневно<br>
+          с 10 до 20, ежедневно
           <a href="tel:+78124502525">8 812 450-25-25</a>
         </div>
       </header>
@@ -66,75 +71,75 @@
       <main class="content">
         <div class="slider">
           <div class="slide1">
-            <img src="slide1.jpg" width="500" height="200" alt="Крем-брюле и пломбир с малиновым джемом">
+            <img src="img/slider/slide1.jpg" width="500" height="200" alt="Крем-брюле и пломбир с малиновым джемом">
             <div>
               Крем-брюле и пломбир с малиновым джемом
             </div>
-            <a class="btn" href="#">Давайте оба!</a> 
+            <a class="btn" href="#">Давайте оба!</a>
           </div>
-		  
+
           <div class="slide2">
-            <img src="slide2.jpg" width="500" height="200" alt="Шоколадный пломбир и лимонный сорбет">
+            <img src="img/slider/slide2.jpg" width="500" height="200" alt="Шоколадный пломбир и лимонный сорбет">
             <div>
               Шоколадный пломбир и лимонный сорбет
             </div>
-            <a class="btn" href="#">Давайте оба!</a> 
+            <a class="btn" href="#">Давайте оба!</a>
           </div>
-		  
+
           <div class="slide3">
-            <img src="slide3.jpg" width="500" height="200" alt="Пломбир с помадкой и клубничный щербет">
+            <img src="img/slider/slide3.jpg" width="500" height="200" alt="Пломбир с помадкой и клубничный щербет">
             <div>
               Пломбир с помадкой и клубничный щербет
             </div>
-            <a class="btn" href="#">Давайте оба!</a> 
+            <a class="btn" href="#">Давайте оба!</a>
           </div>
         </div>
-          
-          <input type="radio" id="btn-1" name="toggle" checked>
-          <input type="radio" id="btn-2" name="toggle">
-          <input type="radio" id="btn-3" name="toggle">
-          
-          <div class="slider-controls">  <!--  подсмотрела в курсах "мастерские", я так понимаю это для позиционирования переключалок в слайдере -->
-            <label for="btn-1"></label>
-            <label for="btn-2"></label>
-            <label for="btn-3"></label>
-          </div>
-		 
-				
+
+        <div class="slider-controls">  
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+        </div>
+
+
         <section class="benefit">
-          <article class="benefit-item"> 
+          <article class="benefit-item">
             <h2>Малинка даром!</h2>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="btn" href="#">Хочу варенье!</a> 
+            <a class="btn" href="#">Хочу варенье!</a>
           </article>
 
-          <article class="benefit-item"> 
+          <article class="benefit-item">
             <h2>Шоколадки даром!</h2>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
             <a class="btn" href="#">Хочу шоколадки!</a>
           </article>
         </section>
-		
+
         <section class="hits">
           <article class="hits-item">
+            <img src="img/items/item1.png" width="50" height="50" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <span class="item-price">310р./кг</span>
             <span class="item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
             <a href="#" class="btn">Быстрый просмотр</a>
           </article>
-		  
+
           <article class="hits-item">
+            <img src="img/items/item2.png" width="50" height="50" alt="Сливочно-кофейное с кусочками шоколада">
             <span class="item-price">380р./кг</span>
             <span class="item-name">Сливочно-кофейное с кусочками шоколада</span>
             <a href="#" class="btn">Быстрый просмотр</a>
           </article>
-		  
+
           <article class="hits-item">
+            <img src="img/items/item3.png" width="50" height="50" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <span class="item-price">355р./кг</span>
             <span class="item-name">Сливочно-клубничное с присыпкой из белого шоколада</span>
             <a href="#" class="btn">Быстрый просмотр</a>
           </article>
-		  
+
           <article class="hits-item">
+            <img src="img/items/item4.png" width="50" height="50" alt="Сливочное крем-брюле с карамельной подливкой">
             <span class="item-price">415р./кг</span>
             <span class="item-name">Сливочное крем-брюле с карамельной подливкой</span>
             <a href="#" class="btn">Быстрый просмотр</a>
@@ -154,21 +159,21 @@
         <section class="news">
           <article class="news-item">
             <span>Новое в нашем блоге</span>
-            <p><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
+            <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
           </article>
 
           <section class="news-subscription">
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form action="#" method="post"> 
+            <form action="#" method="post">
               <input type="text" name="email" placeholder="Электронная почта">
               <input type="submit" class="btn" value="Отправить">
             </form>
           </section>
         </section>
-				
-        <div class="maps"> 
+
+        <div class="maps">
           <section class="contacts">
-            <p>Адрес главного офиса <br>и офлайн магазина:<br><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p> 
+            <p>Адрес главного офиса <br>и офлайн магазина:<br><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
             <p>Для заказов по телефону: <br><b><a href="tel:+78124502525">8 812 450-25-25</a></b> (с 10 до 20 ежедневно)</p>
             <a class="btn" href="#">Форма обратной связи</a>
             <form action="#" method="post">
@@ -183,14 +188,14 @@
       </main>
 
       <footer class="page-footer">
-        <section class="social"> 
+        <section class="social">
           <a href="#" class="social-btn social-btn-tw">Твиттер</a>
           <a href="#" class="social-btn social-btn-ig">Инстаграм</a>
           <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
           <a href="#" class="social-btn social-btn-vk">Вконтакте</a>
         </section>
 
-        <section class="extra-info"> 
+        <section class="extra-info">
           <ul>
             <li>
               <a href="#">Для поставщиков</a>
@@ -207,14 +212,14 @@
           </ul>
         </section>
 
-        <div class="copyright">
+        <address>
           <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="#" width="150" height="50" alt="htmlacademy.ru">
+            <img src="img/academy_logo.png" width="150" height="50" alt="htmlacademy.ru">
           </a>
           Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017
-        </div>
-			</footer>
+        </address>
+      </footer>
     </div>
-    <script src="script.js"></script>	
+    <script src="script.js"></script>
   </body>
 </html>
