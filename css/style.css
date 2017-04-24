@@ -131,6 +131,7 @@ nav li>ul {
 
 .map {
   min-height: 430px;
+  min-width: 1150px;
 }
 
 .contacts {
