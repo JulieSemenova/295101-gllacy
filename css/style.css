@@ -1,11 +1,15 @@
 body {
 	position: relative;
+  
+  min-width: 1200px;
   margin: 0;
+  
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
 	font-family: "Roboto", "Arial", sans-serif;
-	font-size: 16px;
-	line-height: 22px;
-	color: #323232;
-	font-weight: normal;
+	  
+  color: #323232;
 }
 
 .clearfix::after {
@@ -18,18 +22,20 @@ body {
 .container {
   width: 1150px;
   margin: 0 auto;
-  padding: 0 35px;
+  padding: 0 25px;
+  background-color: lightblue;
 }
 
  body::after {
 	content: "";
 	position: absolute;
-	min-height: 100%;
-	width: 100%;
-	 /* background: url('../gllacy-catalog-1200.jpg') no-repeat center 0;  */
-	top: 0;
+  top: 0;
 	left: 0;
 	opacity: 0.5;
+  
+  width: 100%;
+	min-height: 100%;
+	 /* background: url('../gllacy-catalog-1200.jpg') no-repeat center 65px;  */
 } 
 
 .page-header {
@@ -38,27 +44,33 @@ body {
 
 .header-logo {
   float: left;
+  
   width: 154px;
   min-height: 75px;
+  
   background-color: lightgreen;
 }
 
 .main-navigation {
   float: left;
+  
   width: 600px;
   min-height: 75px;
+  
   background-color: lightblue;
 }
 
 
-nav li>ul {
+nav li > ul {
     display: none;
 }
 
 .user-block {
   float: right;
+  
   width: 350px;
   min-height: 65px;
+  
   background-color: pink;
 }
 
@@ -69,9 +81,10 @@ nav li>ul {
 /* index */
 
 .slider {
-  background-color: lightyellow;
   min-height: 535px;
   margin-bottom: 35px;
+  
+  background-color: lightyellow;
 }
 
 .benefit {
@@ -80,6 +93,7 @@ nav li>ul {
 
 .benefit-item {
   float: left;
+  
   width: 520px;
   min-height: 190px;
   padding: 20px ;
@@ -89,28 +103,59 @@ nav li>ul {
   margin-left: 25px;
 }
 
-/* .hits { */
-  /* margin-bottom: 35px; */
+/* .catalog { */
+  /* min-height: 300px; */
 /* } */
 
-.catalog-item {
-  float: left;
-  width: 267px;
-  min-height: 365px;
-  margin-right: 25px;
-  font-size: 14px;
+/* .catalog-item { */
+  /* float: left; */
+  
+  /* width: 267px; */
+  /* min-height: 365px; */
+  /* margin-right: 25px; */
+  
+  /* font-size: 14px; */
+/* } */
+
+/* .catalog-item:nth-child(4n) { */
+  /* margin-right: 0; */
+/* } */
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  /* font-size: 14px; */
+  /* min-height: 300px; */
 }
 
-.catalog-item:nth-child(4n) {
-  float: left;
-  margin-right: 0;
+.catalog-item {
+  width: 267px;
+}
+
+.catalog-item img,
+.basket img {
+  border-radius: 50%;
 }
 
 .about-us {
-  min-height: 260px;
   width: 1110px;
+  min-height: 260px;
   margin-bottom: 40px;
   padding: 25px 20px;
+}
+
+.about-us li {
+  float: left;
+  
+  width: 480px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.about-us li :nth-child(2n){
+  margin-right: 0;
 }
 
 .news {
@@ -119,10 +164,11 @@ nav li>ul {
 
 .news-item {
   float: left;
-  min-height: 170px;
+  
   width: 520px;
-  padding: 25px 20px;
+  min-height: 170px;
   margin-right: 25px;
+  padding: 25px 20px;
 }
 
 .news-item:nth-child(2n) {
@@ -130,16 +176,22 @@ nav li>ul {
 }
 
 .map {
+  min-width: 1200px;
   min-height: 430px;
-  min-width: 1150px;
+  margin-left: -25px;
+    
+  background-color: lightblue;
 }
+ 
 
 .contacts {
   float: right;
-  min-height: 255px;
+  
+  
   width: 255px;
-  padding: 25px;
+  min-height: 255px;
   margin: auto 0;
+  padding: 25px;
 }
 
 
@@ -147,36 +199,42 @@ nav li>ul {
 
 .shop-header {
   min-height: 65px;
+  
   background-color: lightblue;
 }
 
 .main-sorting {
   width: 880px;
   min-height: 145px;
-  background-color: lightgreen;
   margin-bottom: 35px;
+  
+  background-color: lightgreen;
 }
 
 .sorting {
   float: left;
+  
   width: 180px;
   min-height: 40px;
 }
 
 .price {
   float: left;
+  
   width: 200px;
   min-height: 40px;
 }
 
 .fat {
   float: left;
+  
   width: 400px;
   min-height: 40px;
 }
 
 .fill{
   float: left;
+  
   width: 700px;
   min-height: 40px;
 }
@@ -185,29 +243,29 @@ nav li>ul {
   /* float: right; */
 /* } */
 
-.catalog {
-  min-height: 1100px;
-}
-
 .paginator {
   min-height: 35px;
   padding: 25px 0;
+  
   background-color: lightblue;
 }
 
 .page-footer {
   min-height: 65px;
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .social {
   float: left;
+  
   width: 250px;
   min-height: 50px;
 }
 
 .extra-info {
   float: left;
+  
   width: 380px;
   min-height: 50px;
   margin-right: 220px;
@@ -215,6 +273,7 @@ nav li>ul {
 
 .copyright {
   float: right;
+  
   width: 200px;
   min-height: 70px;
 }
@@ -255,8 +314,8 @@ h2 {
 }
 
 .about-us h2 {
+  font-weight: normal;
 	font-size: 24px;
 	line-height: 30px;
 	color: #323232;
-	font-weight: normal;
 }
