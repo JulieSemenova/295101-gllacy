@@ -1,23 +1,23 @@
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/web/roboto.woff') format('woff');
+  src: url('../fonts/roboto.woff') format('woff');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/web/robotomedium.woff') format('woff');
+  src: url('../fonts/robotomedium.woff') format('woff');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/web/robotobold.woff') format('woff');
+  src: url('../fonts/robotobold.woff') format('woff');
   font-weight: 700;
-}
+}    /*шрифты не подключала как показывали ибо на работке нет инета*/
 
 body {
-	/* position: relative; */
+	/*position: relative;*/
   
   min-width: 1200px;
   margin: 0;
@@ -26,7 +26,7 @@ body {
   font-size: 16px;
   line-height: 22px;
 	font-family: 'Roboto', 'Arial', sans-serif;  
-  color: #323232;
+  color: #ffffff;
 }
 
 .clearfix::after {
@@ -40,7 +40,7 @@ body {
   min-width: 1200px;
   margin: 0;
   
-  background-color: grey;
+  background-color: lightgreen;
 }
 
 .center {
@@ -49,65 +49,277 @@ body {
   padding: 0 25px;
 }
 
- /* body::after { */
-	/* content: ''; */
-	/* position: absolute; */
-  /* top: 0; */
-	/* left: 0; */
-	/* opacity: 0.5; */
+/* body::after {
+	content: '';
+	position: absolute;
+  top: 0;
+	left: 0;
+	opacity: 0.5;
   
-  /* width: 100%; */
-	/* min-height: 100%; */
-	 /* background: url('../gllacy-catalog-1200.jpg') no-repeat center 0;  */
-/* }  */
+  width: 100%;
+	min-height: 100%;
+	 background: url('../gllacy-index-1200.jpg') no-repeat center 0;  
+} */
 
 .page-header {
+  position: relative;
   min-height: 75px;
+  padding-top: 10px;
 }
 
 .header-logo {
   float: left;
   
-  width: 154px;
-  min-height: 75px;
-  
-  background-color: lightgreen;
+  width: 155px;
+  min-height: 75px; 
+  padding-right: 10px;
 }
 
 .main-navigation {
   float: left;
   
   width: 600px;
-  min-height: 75px;
+  padding-top: 15px;
   
-  background-color: lightblue;
+  font-weight: 700;
+	line-height: 18px;
 }
 
-
-nav li > ul {
-    display: none;
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
 }
 
-.user-block {
+.main-navigation  li {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-navigation a {
+  display: block;
+  
+  padding: 5px 12px;
+  
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.main-navigation a:hover {
+  color: #000000;
+  background: #d07058;
+}
+
+.sub-menu { 
+  position: absolute;
+  
+  display: none;
+  
+  margin: 0;
+  padding: 0;
+  width: 146px;
+
+  list-style: none;
+  background-color: #ffffff;
+  
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.sub-menu a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul > li:hover .sub-menu {   /*какой-то костыль в указании селекторов но по другому я хз как*/
+  display: block;
+}
+
+.sub-menu a:hover {     /*в подменю цветом выделяется только ссылка а не лишка не понимаю как сделать*/
+  color: #000000;
+  background: #fbded7;
+}
+
+.sub-menu a:active {
+  color: #000000;
+  background: #f6b5a5;
+}
+
+.user-block {  
   float: right;
   
-  width: 350px;
-  min-height: 65px;
- 
-  background-color: pink;
+  max-width: 350px;
+  margin-top: 15px;
+  
+  font-weight: 500;
+  font-size: 14px;
+	line-height: 16px;
+}
+
+.user-block ul {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.user-block li {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.user-block a {
+  display: block;
+  text-decoration: none;
+  
+  padding: 7px;
+  
+  color: #ffffff;
+}
+
+.user-block a:hover { /*пробовала сделать чтоб еще и изображения при наведении меняли цвет*/
+  color: #000000;     /*надо запиливать спрайт и не мучаться*/
+}
+
+.user-block .user-search { /*не получилось разнести как на макете*/
+  height: 20px;     /*не знаю как сделать у них еще задний фон полупрозрачный*/
+  width: 20px;
+  
+  font-size: 14px; 
+	line-height: 24px;
+  color: #999999;
+  
+  background: url('../img/icons/search.png') no-repeat 5px 5px;
+}
+
+.user-block .user-enter {
+  padding-left: 25px;
+  background: url('../img/icons/enter.png') no-repeat 0 5px;
+}
+
+.user-block .user-basket {
+  padding-left: 25px;
+  background: url('../img/icons/basket.png') no-repeat 0 5px;
+}
+
+.search {
+  display: none;
+  position: absolute;
+  right: 10px;
+  
+  padding: 20px 17px;
+  background-color: rgb(248, 247, 243);
+}
+
+.basket {
+  /* display: none; */
+}
+
+
+.enter {
+  display: none;
+  
+  position: absolute;
+  right: 10px;
+  
+  padding: 20px 17px;
+  background-color: rgb(248, 247, 243);
 }
 
 .header-contacts {
-  display: none;   
+  position: absolute;
+  top: 65px;
+  right: 15px;
+  
+  width: 180px;
+  
+  font-weight: 700;
+}
+
+.header-contacts a {
+  font-size: 22px;
+  line-height: 24px;
+  text-decoration: none;
 }
 
 /* index */
 
 .slider {
+  position: relative; 
+  
   min-height: 535px;
-  margin-bottom: 35px;
- 
-  background-color: lightyellow;
+  margin-bottom: 25px;
+  
+  font-weight: 700;
+  font-size: 60px;
+	line-height: 60px;
+}
+
+.slider .btn {
+  position: absolute;
+  top: 160px;
+  left: 235px;
+  
+  width: 200px;
+  
+  font-weight: 700;
+  font-size: 32px;
+	line-height: 44px;
+  
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.slider .slide1 {
+  position: absolute;
+  top: 305px;
+  left: 240px;
+  
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  
+  width: 670px;
+}
+
+/* .slider .slide2 { */
+  /* position: absolute; */
+  /* top: 305px; */
+  /* left: 240px; */
+  
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  /* text-align: center; */
+  
+  /* width: 670px; */
+/* } */
+
+/* .slider .slide3 { */
+  /* position: absolute; */
+  /* top: 305px; */
+  /* left: 240px; */
+  
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  /* text-align: center; */
+  
+  /* width: 670px; */
+/* } */
+
+
+.btn {
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+	line-height: 24px;
+  
+  text-decoration: none;
+  background-color: #ec593c;
+  color: #ffffff;
 }
 
 .benefit {
@@ -115,15 +327,49 @@ nav li > ul {
 }
 
 .benefit-item {
+  position: relative;
+  
   float: left;
   
   width: 520px;
   min-height: 190px;
-  padding: 20px ;
+  padding: 20px;
+  
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .benefit-item:nth-child(2n) {
   margin-left: 25px;
+}
+
+.benefit-item .btn {
+  position: absolute;
+  right: 40px;
+  bottom: 35px;
+}
+
+.benefit .benefit-1 {
+  background: url('../img/benefit1.jpg') no-repeat;
+  border-radius: 15px;
+}
+
+.benefit .benefit-2 {
+  background: url('../img/benefit2.jpg') no-repeat;
+  border-radius: 15px;
+}
+
+.benefit-item h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.benefit-item p {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
 }
 
 .catalog {
@@ -133,8 +379,17 @@ nav li > ul {
 }
 
 .catalog-item {
-  width: 267px;
-  /*height: 361px;*/
+  position: relative;
+  width: 269px;
+}
+
+.hit::before {
+  position: absolute;
+  content: '';
+  width: 61px;
+  height: 61px;
+  background: url('../img/hit.png');
+  border-radius: 50%;
 }
 
 .catalog-item img,
@@ -142,27 +397,76 @@ nav li > ul {
   border-radius: 50%;
 }
 
+.item-price {
+  position: absolute;
+  bottom: 100px;
+  
+  font-weight: 700;
+  font-size: 45px;
+	line-height: 45px;
+}
+
+.item-name {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  
+  padding-top: 10px;
+  
+  font-weight: 500;
+  text-decoration: underline;;
+}
+
 .about-us {
   min-height: 260px;
   margin-bottom: 40px;
   padding: 25px 20px;
+
+  background: url('../img/waffle.jpg');
+  border-radius: 15px;
+
+  color: #323232;
 }
+
+.about-us h2 {
+  margin: 0;
+  padding: 0;
+  
+  font-weight: 500;
+	font-size: 24px;
+  padding-bottom: 30px;
+	line-height: 30px;
+  
+}
+
+.about-us ul {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+/*не совсем понимаю как сделать иконки на каждую лишку. мб спрайт?*/
 
 .about-us li {
-  /*float: left;*/
   display: inline-block;
   vertical-align: top;
+  
   width: 480px;
-  margin-right: 30px;
-  margin-bottom: 20px;
+  margin-left: 70px;
+  padding-bottom: 30px;
 }
+ 
+
 
 .about-us li :nth-child(2n){
-  margin-right: 0;
+    margin-left: 0;
 }
 
 .news {
   margin-bottom: 40px;
+
+  font-weight: 500; 
 }
 
 .news-item {
@@ -178,12 +482,50 @@ nav li > ul {
   margin-right: 0;
 }
 
+.news-item span {
+  font-weight: 500;
+}
+
+ .news-item a { 
+   font-weight: 700; 
+   font-size: 24px; 
+   line-height: 30px;
+
+   color: #323232; 
+ }
+
+.news .blog {
+  background: url('../img/news1.jpg') no-repeat;
+  border-radius: 15px;
+
+  color: #323232;
+}
+
+.news .subscription {   /*вопрос как сделать рамку каким своством нашла border-image: */
+  background: #f8f7f4;
+  border-radius: 15px;
+
+  color: #5a5a5a;
+}
+
 .map {
   min-height: 430px;
     
-  background-color: yellow;
+  background: #cee0c0 url('../img/map.jpg') no-repeat;
 }
  
+
+/*СДЕЛАНО ДО ПОДВАЛА СТРАНИЦУ КАТАЛОГА ДАЖЕ НЕ СМОТРЕЛА*/
+
+/*попапы в user-block не получаются. не понимаю как прописать чтоб при наведении выпадало*/
+/*радиобатаны пока не делала*/
+/*дома словила глюк что выпадающее меню пропадает и я не могу мышку до конца довести
+на работке такого не было*/
+
+
+
+/*если ты это читаешь спасибо тебе еще раз <3
+прости за костыли я знаю это больно*/
 
 .contacts {
   float: right;
@@ -192,6 +534,9 @@ nav li > ul {
   min-height: 255px;
   margin: auto 0;
   padding: 25px;
+
+  background-color: #fdfefe;
+  color: #323232;
 }
 
 
@@ -281,17 +626,7 @@ nav li > ul {
   display: none;
 }
 
-.enter {
-  display: none;
-}
 
-.basket {
-  display: none;
-}
-
-.search {
-  display: none;
-}
 
 .feedback {
   display: none;
@@ -306,163 +641,163 @@ input[name='toggle'] {
   display: none;
 }
 
-/* шрифты */
+                                        /* шрифты */
 
-.main-navigation {
-  font-weight: 700;
-	line-height: 18px;
-}
+/* .main-navigation { */
+  /* font-weight: 700; */
+	/* line-height: 18px; */
+/* } */
 
-.user-block {
-  font-weight: 500;
-  font-size: 14px;
-	line-height: 16px;
-}
+/* .user-block { */
+  /* font-weight: 500; */
+  /* font-size: 14px; */
+	/* line-height: 16px; */
+/* } */
 
-.header-contacts {
-  font-weight: 700;
-  font-size: 16px;
-	line-height: 22px;
-}
+/* .header-contacts { */
+  /* font-weight: 700; */
+  /* font-size: 16px; */
+	/* line-height: 22px; */
+/* } */
 
-.header-contacts  a{
-  font-size: 22px;
-	line-height: 24px;
-}
+/* .header-contacts  a{ */
+  /* font-size: 22px; */
+	/* line-height: 24px; */
+/* } */
 
-.slider {
-  font-weight: 700;
-  font-size: 60px;
-	line-height: 60px;
-}
+/* .slider { */
+  /* font-weight: 700; */
+  /* font-size: 60px; */
+	/* line-height: 60px; */
+/* } */
 
-.slider .btn {
-  font-weight: 700;
-  font-size: 32px;
-	line-height: 44px;
-}
+/* .slider .btn { */
+  /* font-weight: 700; */
+  /* font-size: 32px; */
+	/* line-height: 44px; */
+/* } */
 
-.btn {
-  font: inherit;
-  font-weight: 700;
-  font-size: 18px;
-	line-height: 24px;
+/* .btn { */
+  /* font: inherit; */
+  /* font-weight: 700; */
+  /* font-size: 18px; */
+	/* line-height: 24px; */
   
-}
+/* } */
 
 /* h2 { */
 	/* font-size: 35px; */
 	/* line-height: 41px; */
 /* } */
 
-.benefit-item {
-  font-weight: 700;
-  font-size: 18px;
-}
+/* .benefit-item { */
+  /* font-weight: 700; */
+  /* font-size: 18px; */
+/* } */
 
-.item-price {
-  font-weight: 700;
-  font-size: 45px;
-	line-height: 45px;
-}
+/* .item-price { */
+  /* font-weight: 700; */
+  /* font-size: 45px; */
+	/* line-height: 45px; */
+/* } */
 
-.item-name {
-  font-weight: 500;
-}
+/* .item-name { */
+  /* font-weight: 500; */
+/* } */
 
-.about-us h2 {
-  font-weight: 500;
-	font-size: 24px;
-	line-height: 30px;
-}
+/* .about-us h2 { */
+  /* font-weight: 500; */
+	/* font-size: 24px; */
+	/* line-height: 30px; */
+/* } */
 
-.news span {
-  font-weight: 500;
-}
+/* .news span { */
+  /* font-weight: 500; */
+/* } */
 
-.news a {
-  font-weight: 700;
-  font-size: 24px;
-	line-height: 30px;
-}
+/* .news a { */
+  /* font-weight: 700; */
+  /* font-size: 24px; */
+	/* line-height: 30px; */
+/* } */
 
-.news [name='email'] {
-	line-height: 24px;
-}
+/* .news [name='email'] { */
+	/* line-height: 24px; */
+/* } */
 
-.page-footer .extra-info {
-  font-size: 13px;
-	line-height: 16px;
-}
+/* .page-footer .extra-info { */
+  /* font-size: 13px; */
+	/* line-height: 16px; */
+/* } */
 
-.page-footer .copyright {
-  font-size: 12px;
-	line-height: 16px;
-}
+/* .page-footer .copyright { */
+  /* font-size: 12px; */
+	/* line-height: 16px; */
+/* } */
 
 
-.shop-header h1{
-  font-weight: 700;
-  font-size: 35px;
-	line-height: 41px;
-}
+/* .shop-header h1{ */
+  /* font-weight: 700; */
+  /* font-size: 35px; */
+	/* line-height: 41px; */
+/* } */
 
-.breadcrumbs {
-  font-size: 14px;
-	line-height: 16px;
-}
+/* .breadcrumbs { */
+  /* font-size: 14px; */
+	/* line-height: 16px; */
+/* } */
 
-form legend {
-  font-weight: 500;
-  font-size: 14px;
-	line-height: 16px;
-}
+/* form legend { */
+  /* font-weight: 500; */
+  /* font-size: 14px; */
+	/* line-height: 16px; */
+/* } */
 
-.paginator {
-  font-weight: 500;
-}
+/* .paginator { */
+  /* font-weight: 500; */
+/* } */
 
-.search {
-  font-size: 14px;
-	line-height: 24px;
-  color: #999999;
-}
+/* .search { */
+  /* font-size: 14px; */
+	/* line-height: 24px; */
+  /* color: #999999; */
+/* } */
 
-.enter input {
-  font-size: 14px;
-	line-height: 24px;
-  color: #999999;
-}
+/* .enter input { */
+  /* font-size: 14px; */
+	/* line-height: 24px; */
+  /* color: #999999; */
+/* } */
 
-.enter a {
-  font-size: 13px;
-	line-height: 24px;
-  color: #999999;
-}
+/* .enter a { */
+  /* font-size: 13px; */
+	/* line-height: 24px; */
+  /* color: #999999; */
+/* } */
 
-.basket a{
-  font-size: 13px;
-	line-height: 16px;
-}
+/* .basket a{ */
+  /* font-size: 13px; */
+	/* line-height: 16px; */
+/* } */
 
-.total-order {
-  font-weight: 700;
-  font-size: 15px;
-	line-height: 28px;
-}
+/* .total-order { */
+  /* font-weight: 700; */
+  /* font-size: 15px; */
+	/* line-height: 28px; */
+/* } */
 
-.feedback {
-  font-weight: 500;
-  font-size: 24px;
-	line-height: 28px;
-}
+/* .feedback { */
+  /* font-weight: 500; */
+  /* font-size: 24px; */
+	/* line-height: 28px; */
+/* } */
 
-.feedback b {
-  font-weight: 700;
-  font-size: 18px;
-	line-height: 22px;
-}
+/* .feedback b { */
+  /* font-weight: 700; */
+  /* font-size: 18px; */
+	/* line-height: 22px; */
+/* } */
 
-.feedback  input{
-	line-height: 24px;
-}
+/* .feedback  input{ */
+	/* line-height: 24px; */
+/* } */
