@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -16,10 +17,10 @@
         </div>
 
         <nav class="main-navigation">
-          <ul>
+          <ul >
             <li>
               <a href="#">Каталог</a>
-              <ul>
+              <ul class="sub-menu">
                 <li><a href="#"><b>Новинки</b></a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
@@ -39,13 +40,13 @@
         <div class="user-block">
           <ul>
             <li>
-              <a href="#">ПОИСК</a>
+              <a class="user-search" href="#"></a>
               <form class="search" action="#" method="get">
                 <input type="search" name="search" placeholder="Что ищем?">
               </form>
             </li>
             <li>
-              <a href="#">Вход</a>
+              <a class="user-enter" href="#">Вход</a>
               <form class="enter" action="#" method="post"> 
                 <input type="email" name="email" autocomplete="on" placeholder="Электронная почта">
                 <input type="password" name="password" placeholder="Пароль">
@@ -57,7 +58,7 @@
               </form>
             </li>
             <li>
-              <a href="#">Пусто</a>
+              <a class="user-basket" href="#">Пусто</a>
             </li> 
           </ul>
         </div>
@@ -72,9 +73,9 @@
         <div class="center">
           <div class="slider">
             <div class="slide1">
-              <div>
+              <!-- <div> -->
                 Крем-брюле и пломбир с малиновым джемом
-              </div>
+              <!-- </div> -->
               <a class="btn" href="#">Давайте оба!</a>
             </div>
 
@@ -100,42 +101,42 @@
           </div>
 
           <section class="benefit clearfix">
-            <article class="benefit-item">
+            <article class="benefit-item benefit-1">
               <h2>Малинка даром!</h2>
               <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
               <a class="btn" href="#">Хочу варенье!</a>
             </article>
 
-            <article class="benefit-item">
+            <article class="benefit-item benefit-2">
               <h2>Шоколадки даром!</h2>
               <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
               <a class="btn" href="#">Хочу шоколадки!</a>
             </article>
           </section>
 
-          <section class="catalog clearfix">
-            <article class="hits catalog-item">
+          <section class="catalog">
+            <article class="catalog-item">
               <img src="img/items/item1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <span class="item-price">310₽/кг</span>
               <span class="item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
 
-            <article class="hits catalog-item">
+            <article class="catalog-item">
               <img src="img/items/item2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               <span class="item-price">380₽/кг</span>
               <span class="item-name">Сливочно-кофейное с кусочками шоколада</span>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
 
-            <article class="hits catalog-item">
+            <article class="catalog-item">
               <img src="img/items/item3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <span class="item-price">355₽/кг</span>
               <span class="item-name">Сливочно-клубничное с присыпкой из белого шоколада</span>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
 
-            <article class="hits catalog-item">
+            <article class="catalog-item">
               <img src="img/items/item4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
               <span class="item-price">415₽/кг</span>
               <span class="item-name">Сливочное крем-брюле с карамельной подливкой</span>
