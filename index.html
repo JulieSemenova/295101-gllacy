@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -13,24 +14,24 @@
     <div class="container">
       <header class="page-header center clearfix">
         <nav class="main-navigation">
-          <ul>
-            <li class="header-logo">
-              <img src="img/logo.png" width="154" height="64" alt="GllacyShop">
-            </li>
-            <li>
-              <a href="#">Каталог</a>
+          <div class="header-logo">
+            <img src="img/logo.png" width="154" height="64" alt="GllacyShop">
+          </div>
+          <ul class="main-menu">
+            <li class="main-menu_catalog">
+              <a class="active" href="#">Каталог</a>
               <ul class="sub-menu">
-                <li><a href="#"><b>Новинки</b></a></li>
-                <li><a href="catalog.html">Сливочное</a></li>
-                <li><a href="#">Щербеты</a></li>
-                <li><a href="#">Фруктовый лёд</a></li>
-                <li><a href="#">Мелорин</a></li>
+                <li class="sub-menu_new"><a href="#"><b>Новинки</b></a></li>
+                <li class="sub-menu_cream"><a href="catalog.html">Сливочное</a></li>
+                <li class="sub-menu_sherbet"><a href="#">Щербеты</a></li>
+                <li class="sub-menu_fruit"><a href="#">Фруктовый лёд</a></li>
+                <li class="sub-menu_melorin"><a href="#">Мелорин</a></li>
               </ul>
             </li>
-            <li>
+            <li class="main-menu_delivery">
               <a href="#">Доставка и оплата</a>
             </li>
-            <li>
+            <li class="main-menu_about">
               <a href="#">О Компании</a>
             </li>
           </ul>
@@ -38,32 +39,32 @@
 
         <div class="user-block">
           <ul>
-            <li>
-              <a class="user-search" href="#"></a>
+            <li class="user-search">
+              <a href="#"></a>
               <form class="search" action="#" method="get">
                 <input type="search" name="search" placeholder="Что ищем?">
               </form>
             </li>
-            <li>
-              <a class="user-enter" href="#">Вход</a>
+            <li class="user-enter">
+              <a href="#">Вход</a>
               <form class="enter" action="#" method="post"> 
                 <input type="email" name="email" autocomplete="on" placeholder="Электронная почта">
                 <input type="password" name="password" placeholder="Пароль">
                 <input class="btn" type="submit" value="Войти">
-                <div>
+                <div class="login-help">
                   <a href="#">Забыли пароль?</a>
                   <a href="#">Новая регистрация</a>
                 </div>
               </form>
             </li>
-            <li>
-              <a class="user-basket" href="#">Пусто</a>
+            <li class="user-basket">
+              <a href="#">Пусто</a>
             </li> 
           </ul>
         </div>
 
         <div class="header-contacts">
-          с 10 до 20, ежедневно
+          <span>C 10 до 20, ежедневно</span>
           <a href="tel:+78124502525">8 812 450-25-25</a>
         </div>
       </header>
@@ -114,28 +115,28 @@
           </section>
 
           <section class="catalog">
-            <article class="catalog-item">
+            <article class="catalog-item hit">
               <img src="img/items/item1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <span class="item-price">310₽/кг</span>
               <span class="item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
 
-            <article class="catalog-item">
+            <article class="catalog-item hit">
               <img src="img/items/item2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               <span class="item-price">380₽/кг</span>
               <span class="item-name">Сливочно-кофейное с кусочками шоколада</span>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
 
-            <article class="catalog-item">
+            <article class="catalog-item hit">
               <img src="img/items/item3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <span class="item-price">355₽/кг</span>
               <span class="item-name">Сливочно-клубничное с присыпкой из белого шоколада</span>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
 
-            <article class="catalog-item">
+            <article class="catalog-item hit">
               <img src="img/items/item4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
               <span class="item-price">415₽/кг</span>
               <span class="item-name">Сливочное крем-брюле с карамельной подливкой</span>
@@ -156,7 +157,7 @@
           </article>
 
           <section class="news clearfix">
-            <article class="news-item">
+            <article class="news-item blog">
               <span>Новое в нашем блоге</span>
               <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
             </article>

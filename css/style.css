@@ -1,23 +1,23 @@
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/roboto.woff') format('woff');
+  src: url('../fonts/web/roboto.woff') format('woff');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/robotomedium.woff') format('woff');
+  src: url('../fonts/web/robotomedium.woff') format('woff');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/robotobold.woff') format('woff');
+  src: url('../fonts/web/robotobold.woff') format('woff');
   font-weight: 700;
-}    /*шрифты не подключала как показывали ибо на работке нет инета*/
+}
 
 body {
-	/*position: relative;*/
+	position: relative;
   
   min-width: 1200px;
   margin: 0;
@@ -27,6 +27,7 @@ body {
   line-height: 22px;
 	font-family: 'Roboto', 'Arial', sans-serif;  
   color: #ffffff;
+   background-color: rgb(137,171, 157);
 }
 
 .clearfix::after {
@@ -40,7 +41,7 @@ body {
   min-width: 1200px;
   margin: 0;
   
-  background-color: lightgreen;
+ 
 }
 
 .center {
@@ -49,17 +50,17 @@ body {
   padding: 0 25px;
 }
 
-/* body::after {
-	content: '';
-	position: absolute;
-  top: 0;
-	left: 0;
-	opacity: 0.5;
+ /* body::after { */
+	/* content: ''; */
+	/* position: absolute; */
+  /* top: 0; */
+	/* left: 0; */
+	/* opacity: 0.5; */
   
-  width: 100%;
-	min-height: 100%;
-	 background: url('../gllacy-index-1200.jpg') no-repeat center 0;  
-} */
+  /* width: 100%; */
+	/* min-height: 100%; */
+	 /* background: url('../gllacy-index-1200.jpg') no-repeat center 0;  */
+/* }  */
 
 .page-header {
   position: relative;
@@ -67,22 +68,19 @@ body {
   padding-top: 10px;
 }
 
-.header-logo {
-  float: left;
-  
-  width: 155px;
-  min-height: 75px; 
-  padding-right: 10px;
-}
-
 .main-navigation {
   float: left;
   
   width: 600px;
-  padding-top: 15px;
   
   font-weight: 700;
 	line-height: 18px;
+}
+
+.header-logo {  
+  float: left;
+  width: 154px;
+  margin-right: 13px;
 }
 
 .main-navigation ul {
@@ -92,66 +90,99 @@ body {
   list-style: none;
 }
 
-.main-navigation  li {
-  position: relative;
+.main-menu > li {
   display: inline-block;
+  margin-top: 15px;
   vertical-align: top;
 }
 
-.main-navigation a {
+.main-menu a {
   display: block;
   
   padding: 5px 12px;
   
-  text-decoration: underline;
   color: #ffffff;
 }
 
-.main-navigation a:hover {
-  color: #000000;
-  background: #d07058;
+.main-menu .active {
+  position: relative;
+  background-color: rgb(235, 114, 87);
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.main-menu_catalog a:hover,
+.main-menu_delivery a:hover,
+.main-menu_about a:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #f7f6f3;
+  border-radius: 20px;
+}
+
+.main-menu_catalog > a:active,
+.main-menu_delivery a:active,
+.main-menu_about a:active {
+  color: #333333;
+  background-color: #f7f6f3;
+  box-shadow: inset 0 5px 5px -3px grey;
 }
 
 .sub-menu { 
   position: absolute;
+  z-index: 2;
   
   display: none;
-  
-  margin: 0;
-  padding: 0;
-  width: 146px;
-
-  list-style: none;
-  background-color: #ffffff;
+  width: 145px;
+  padding-left: 10px;
   
   font-weight: 400;
   font-size: 14px;
+
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 0 black; 
+  overflow: hidden;
+}
+
+.sub-menu li:first-child {
+  border-bottom: 1px solid lightgrey;
 }
 
 .sub-menu a {
+  padding: 10px 15px;
   text-decoration: none;
-  color: #000000;
+  color: #323232;
 }
 
-ul > li:hover .sub-menu {   /*какой-то костыль в указании селекторов но по другому я хз как*/
+.main-menu li:first-child:hover .sub-menu {
   display: block;
 }
 
-.sub-menu a:hover {     /*в подменю цветом выделяется только ссылка а не лишка не понимаю как сделать*/
-  color: #000000;
+.sub-menu .active a {
+  color: white;
+}
+
+.sub-menu a:hover {
+  color: #323232;
   background: #fbded7;
+  border-radius: 0;
 }
 
 .sub-menu a:active {
-  color: #000000;
+  color: #323232;
   background: #f6b5a5;
+}
+
+.sub-menu .active {
+  border-radius: 0;
 }
 
 .user-block {  
   float: right;
   
   max-width: 350px;
-  margin-top: 15px;
+  margin-top: 13px;
   
   font-weight: 500;
   font-size: 14px;
@@ -167,83 +198,198 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
 
 .user-block li {
   position: relative;
+  
   display: inline-block;
   vertical-align: top;
-  margin-left: 10px;
+
+  margin-left: 8px;
+  background-color: rgba(234, 234, 234, 0.2);
+  border-radius: 17px;
+  background-position: 15px 7px;
+}
+
+.user-block li:first-child {
+  margin-left: 0;
 }
 
 .user-block a {
   display: block;
   text-decoration: none;
   
-  padding: 7px;
-  
   color: #ffffff;
 }
 
-.user-block a:hover { /*пробовала сделать чтоб еще и изображения при наведении меняли цвет*/
-  color: #000000;     /*надо запиливать спрайт и не мучаться*/
-}
-
-.user-block .user-search { /*не получилось разнести как на макете*/
-  height: 20px;     /*не знаю как сделать у них еще задний фон полупрозрачный*/
-  width: 20px;
-  
-  font-size: 14px; 
-	line-height: 24px;
-  color: #999999;
-  
-  background: url('../img/icons/search.png') no-repeat 5px 5px;
-}
-
-.user-block .user-enter {
-  padding-left: 25px;
-  background: url('../img/icons/enter.png') no-repeat 0 5px;
-}
-
+.user-block .user-enter,
 .user-block .user-basket {
-  padding-left: 25px;
-  background: url('../img/icons/basket.png') no-repeat 0 5px;
+  padding: 8px 15px 8px 45px;
 }
+
+.user-block li:last-child a {
+  padding-right: 20px;
+}
+
+.user-block li:hover a{
+  color: #323232;
+}
+
+.user-block li:hover {
+  background-color: rgba(234, 234, 234, 1);
+  border-radius: 17px;
+  background-position: 15px 7px;
+}
+
+.user-block li:first-child {
+  background-position: 10px 7px;
+}
+
+.user-search {
+  height: 18px;
+  width: 18px;
+  padding: 8px;
+  
+  background: url('../img/icons/search.png') no-repeat;
+}
+
+.user-search:hover {
+  background: url('../img/icons/search1.png') no-repeat;
+}
+
+.user-enter {
+  background: url('../img/icons/enter.png') no-repeat;
+}
+
+.user-enter:hover {
+  background: url('../img/icons/enter1.png') no-repeat;
+}
+
+.user-basket {
+  background: url('../img/icons/basket.png') no-repeat;
+}
+
+.user-basket:hover {
+  background: url('../img/icons/basket1.png') no-repeat;
+}
+
+.user-block form {
+  border-radius: 10px;
+  box-shadow: 0 10px 35px 0 black;
+}
+
 
 .search {
-  display: none;
   position: absolute;
-  right: 10px;
+  top: 33px;
+  right: 0;
+  z-index: 2;
   
-  padding: 20px 17px;
-  background-color: rgb(248, 247, 243);
+  display: none;
+  width: 310px;
+  
+  padding: 20px 15px;
+  
+  background-color: rgb(248, 247, 243); 
+}
+
+.search input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;  
+
+  font-size: 14px;
+  line-height: 24px;
+  
+  border-radius: 5px;
+}
+
+.user-search:hover .search {
+  display: block;
 }
 
 .basket {
-  /* display: none; */
+  display: none;
 }
 
+.user-basket:hover .basket {
+  position: absolute;
+  top: 33px;
+  right: 0;
+  z-index: 2;
+  
+  display: block;
+  width: 505px;
+  height: 205px;
+  padding: 20px 15px 20px 20px;
+  
+  background-color: rgb(248, 247, 243); 
+  border-radius: 10px;
+  box-shadow: 0 10px 35px 0 black;
+}
 
 .enter {
-  display: none;
-  
   position: absolute;
-  right: 10px;
+  top: 33px;
+  right: 0;
+  z-index: 2;
   
+  display: none;
+  width: 246px;
+  height: 195px; 
   padding: 20px 17px;
   background-color: rgb(248, 247, 243);
+  
+  font-size:14px;
+  line-height: 24px;
+}
+
+.user-enter:hover .enter {
+  display: block;
+}
+
+.enter input:not(:last-of-type) {
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.enter .login-help {
+  float: right;
+  width: 120px;
+  margin-top: 5px;
+}
+
+.login-help  a {
+  color: #323232;
+  font-size: 13px;
+  line-height: 24px;
+  text-decoration: underline;
 }
 
 .header-contacts {
   position: absolute;
-  top: 65px;
-  right: 15px;
+  top: 70px;
+  right: 25px;
   
-  width: 180px;
+  width: 170px;
   
   font-weight: 700;
+ 
+}
+
+.header-contacts span {
+  /* margin-left: 20px; */
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .header-contacts a {
+  float: right;
   font-size: 22px;
   line-height: 24px;
   text-decoration: none;
+  color: #ffffff;
 }
 
 /* index */
@@ -266,12 +412,13 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
   
   width: 200px;
   
+  color: #ffffff;
   font-weight: 700;
   font-size: 32px;
 	line-height: 44px;
   
   text-decoration: none;
-  color: #ffffff;
+  border-radius: 45px;
 }
 
 .slider .slide1 {
@@ -284,6 +431,7 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
   text-align: center;
   
   width: 670px;
+  
 }
 
 /* .slider .slide2 { */
@@ -312,18 +460,43 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
 
 
 .btn {
+  padding: 12px 20px;
+  
+  
   font: inherit;
+  color: #ffffff;
   font-weight: 700;
   font-size: 18px;
 	line-height: 24px;
   
   text-decoration: none;
   background-color: #ec593c;
-  color: #ffffff;
+  border-radius: 25px;
+}
+
+.btn:hover {
+  /* linear-gradient  */
+}
+
+.btn:active {
+  
 }
 
 .benefit {
   margin-bottom: 40px;
+}
+
+.benefit-item h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 35px;
+	line-height: 41px;
+}
+
+.benefit-item p {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
 }
 
 .benefit-item {
@@ -359,19 +532,6 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
   border-radius: 15px;
 }
 
-.benefit-item h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 35px;
-  line-height: 41px;
-}
-
-.benefit-item p {
-  margin: 0;
-  padding: 0;
-  padding-top: 10px;
-}
-
 .catalog {
   display: flex;
   flex-wrap: wrap;
@@ -381,6 +541,7 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
 .catalog-item {
   position: relative;
   width: 269px;
+  /*height: 361px;*/
 }
 
 .hit::before {
@@ -414,7 +575,6 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
   padding-top: 10px;
   
   font-weight: 500;
-  text-decoration: underline;;
 }
 
 .about-us {
@@ -436,7 +596,7 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
 	font-size: 24px;
   padding-bottom: 30px;
 	line-height: 30px;
-  
+  color: #323232;
 }
 
 .about-us ul {
@@ -446,17 +606,15 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
   list-style: none;
 }
 
-/*не совсем понимаю как сделать иконки на каждую лишку. мб спрайт?*/
-
 .about-us li {
   display: inline-block;
   vertical-align: top;
-  
+
   width: 480px;
   margin-left: 70px;
   padding-bottom: 30px;
 }
- 
+
 
 
 .about-us li :nth-child(2n){
@@ -465,8 +623,8 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
 
 .news {
   margin-bottom: 40px;
-
-  font-weight: 500; 
+  
+  font-weight: 500;
 }
 
 .news-item {
@@ -486,13 +644,13 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
   font-weight: 500;
 }
 
- .news-item a { 
-   font-weight: 700; 
-   font-size: 24px; 
-   line-height: 30px;
+ .news-item a {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
 
-   color: #323232; 
- }
+  color: #323232;
+}
 
 .news .blog {
   background: url('../img/news1.jpg') no-repeat;
@@ -501,7 +659,7 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
   color: #323232;
 }
 
-.news .subscription {   /*вопрос как сделать рамку каким своством нашла border-image: */
+.news .subscription {   
   background: #f8f7f4;
   border-radius: 15px;
 
@@ -511,25 +669,13 @@ ul > li:hover .sub-menu {   /*какой-то костыль в указании
 .map {
   min-height: 430px;
     
-  background: #cee0c0 url('../img/map.jpg') no-repeat;
+  background: url('../img/map.jpg') no-repeat center 0;
 }
  
 
-/*СДЕЛАНО ДО ПОДВАЛА СТРАНИЦУ КАТАЛОГА ДАЖЕ НЕ СМОТРЕЛА*/
-
-/*попапы в user-block не получаются. не понимаю как прописать чтоб при наведении выпадало*/
-/*радиобатаны пока не делала*/
-/*дома словила глюк что выпадающее меню пропадает и я не могу мышку до конца довести
-на работке такого не было*/
-
-
-
-/*если ты это читаешь спасибо тебе еще раз <3
-прости за костыли я знаю это больно*/
-
 .contacts {
   float: right;
-  
+
   width: 255px;
   min-height: 255px;
   margin: auto 0;
