@@ -18,7 +18,7 @@
 
 
 body {
-	position: relative;
+  position: relative;
   
   min-width: 1200px;
   margin: 0;
@@ -26,7 +26,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-	font-family: 'Roboto', 'Arial', sans-serif;  
+font-family: 'Roboto', 'Arial', sans-serif;  
   color: #ffffff;
    background-color: #849d8f;
 }
@@ -91,10 +91,15 @@ body {
 .main-navigation {
   float: left;
   
-  width: 600px;
+  /*width: 600px;*/
   
   font-weight: 700;
-	line-height: 18px;
+  line-height: 18px;
+}
+
+.main-menu {
+  float: left;
+  max-width: 433px;
 }
 
 .header-logo {  
@@ -103,7 +108,8 @@ body {
   margin-right: 13px;
 }
 
-.main-navigation ul {
+.main-navigation .main-menu,
+.main-navigation .sub-menu  {
   margin: 0;
   padding: 0;
   
@@ -125,8 +131,7 @@ body {
 }
 
 .main-menu .active {
-  position: relative;
-  background-color: rgb(235, 114, 87);
+  background-color: rgb(208, 112, 88);
   text-decoration: none;
   border-radius: 20px;
 }
@@ -144,12 +149,16 @@ body {
 .main-menu_delivery a:active,
 .main-menu_about a:active {
   color: #333333;
-  background-color: #f7f6f3;
-  box-shadow: inset 0 5px 5px -3px grey;
+  text-decoration: none;
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
 }
 
 .sub-menu { 
   position: absolute;
+
+  /*left: 120px;
+  top: 55px;*/
   z-index: 2;
   
   display: none;
@@ -179,9 +188,9 @@ body {
   display: block;
 }
 
-.sub-menu .active a {
+/*.sub-menu .active a {   пыталась сделать как в стайлгайде при наведении и появлении субменю
   color: white;
-}
+}*/
 
 .sub-menu a:hover {
   color: #323232;
@@ -194,15 +203,18 @@ body {
   background: #f6b5a5;
 }
 
-.sub-menu .active {
+.sub-menu .active { /*стайлгайд "находимся на странице"*/
   border-radius: 0;
 }
 
+
+/* C маргинами тоже что-то по-разному везде 
+у меня была пляска с ними чтоб подогнать под макет*/
 .user-block {  
   float: right;
   
   max-width: 350px;
-  margin-top: 13px;
+  margin-top: 15px;
   
   font-weight: 500;
   font-size: 14px;
@@ -248,10 +260,21 @@ body {
   padding-right: 20px;
 }
 
+
+/* а зачем на ли, если можно на а?
+ у меня не получается по-друому, чтоб при наведении
+ текст был черный
+
+ .user-block a:hover{ так он чернеет только при наведении на сам текст
+  color: #323232;
+}*/
+
+
 .user-block li:hover a{
   color: #323232;
 }
 
+/* по логике это все ссылка */
 .user-block li:hover {
   background-color: rgba(234, 234, 234, 1);
   border-radius: 17px;
@@ -262,8 +285,9 @@ body {
   background-position: 10px 7px;
 }
 
+/* Не вижу смысла в высоте. тогда блок сжимается*/
 .user-search {
-  height: 18px;
+  /*height: 18px;*/
   width: 18px;
   padding: 8px;
   
@@ -326,10 +350,15 @@ body {
   display: block;
 }
 
+/* От этого нет смысла сейчас даже. согласна но баскет есть на
+странице каталога*/
 .basket {
   display: none;
 }
 
+
+/* Оьычно при ховере вешается блок просто.
+не поняла*/
 .user-basket:hover .basket {
   position: absolute;
   top: 33px;
@@ -387,15 +416,16 @@ body {
   text-decoration: underline;
 }
 
+/* Я на нее даже навести не могу. это мы о чем?*/
 .header-contacts {
   position: absolute;
   top: 70px;
   right: 25px;
-  
+
   width: 170px;
-  
+
   font-weight: 700;
- 
+  /* выравнивание*/
 }
 
 .header-contacts span {
@@ -404,6 +434,7 @@ body {
   line-height: 16px;
 }
 
+/* зачем флоат? я не знала как выровнять у меня мозг утек*/
 .header-contacts a {
   float: right;
   font-size: 22px;
@@ -527,6 +558,10 @@ body {
 #btn-2:checked ~ .container label[for="btn-2"],
 #btn-3:checked ~ .container label[for="btn-3"] {
   background-color: #ffffff;
+}
+
+.slider-controls label:hover {
+	background-color: rgba(255, 255, 255, 0.4);
 }
 
 .btn {
