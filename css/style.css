@@ -16,6 +16,7 @@
   font-weight: 700;
 }*/
 
+
 body {
 	position: relative;
   
@@ -27,7 +28,7 @@ body {
   line-height: 22px;
 	font-family: 'Roboto', 'Arial', sans-serif;  
   color: #ffffff;
-   background-color: rgb(137,171, 157);
+   background-color: #849d8f;
 }
 
 .clearfix::after {
@@ -40,8 +41,27 @@ body {
 .container {
   min-width: 1200px;
   margin: 0;
-  
- 
+
+  background-color: #849d8f;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.container::before,
+.container::after {
+  content: '';
+
+  visibility: hidden;
+}
+
+.container::before {
+  background-image: url('../img/slider/slide2.png');
+}
+
+.container::after {
+  background-image: url('../img/slider/slide3.png');
 }
 
 .center {
@@ -397,28 +417,53 @@ body {
 .slider {
   position: relative; 
   
-  min-height: 535px;
   margin-bottom: 25px;
+  padding-top: 315px;
   
-  font-weight: 700;
-  font-size: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.slide {
+  display: none;
+}
+
+.slider-title {
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 35px;
+
+	font-weight: 700;
+	font-size: 60px;
 	line-height: 60px;
 }
 
 .slider .btn {
-  position: absolute;
-  top: 160px;
-  left: 235px;
-  
-  width: 200px;
-  
-  color: #ffffff;
+  display: inline-block;
+  padding: 12px 50px;
+
   font-weight: 700;
   font-size: 32px;
-	line-height: 44px;
-  
+  line-height: 44px;
+  vertical-align: top;
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 45px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.slider .btn:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%); /*взяла из демки, не поняла где они эти цвета достали из фш*/
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider .btn:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .slider .slide1 {
@@ -431,33 +476,58 @@ body {
   text-align: center;
   
   width: 670px;
-  
 }
 
-/* .slider .slide2 { */
-  /* position: absolute; */
-  /* top: 305px; */
-  /* left: 240px; */
-  
-  /* display: inline-block; */
-  /* vertical-align: top; */
-  /* text-align: center; */
-  
-  /* width: 670px; */
-/* } */
+.slider-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  z-index: 20;
 
-/* .slider .slide3 { */
-  /* position: absolute; */
-  /* top: 305px; */
-  /* left: 240px; */
-  
-  /* display: inline-block; */
-  /* vertical-align: top; */
-  /* text-align: center; */
-  
-  /* width: 670px; */
-/* } */
+  font-size: 0;
+}
 
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .container #slide1,
+#btn-2:checked ~ .container #slide2,
+#btn-3:checked ~ .container #slide3 {
+  display: block;
+}
+
+#btn-1:checked ~ .container {
+  background-color: #849d8f;
+  background-image: url('../img/slider/slide1.png');
+}
+
+#btn-2:checked ~ .container {
+  background-color: #8996a6;
+  background-image: url('../img/slider/slide2.png');
+}
+
+#btn-3:checked ~ .container {
+  background-color: #9d8b84;
+  background-image: url('../img/slider/slide3.png');
+}
+
+
+#btn-1:checked ~ .container label[for="btn-1"],
+#btn-2:checked ~ .container label[for="btn-2"],
+#btn-3:checked ~ .container label[for="btn-3"] {
+  background-color: #ffffff;
+}
 
 .btn {
   padding: 12px 20px;
@@ -782,10 +852,7 @@ input[name='toggle'] {
   display: none;
 }
 
-.slide2,
-.slide3 {
-  display: none;
-}
+
 
                                         /* шрифты */
 
