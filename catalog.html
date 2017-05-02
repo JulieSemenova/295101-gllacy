@@ -3,32 +3,33 @@
     <head>
       <meta charset="utf-8">
       <title>Глейси. Каталог товаров</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+      <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
       <header class="page-header center clearfix">
-        <div class="header-logo">
-          <a href="index.html">
-            <img src="img/logo.png" width="154" height="64" alt="GllacyShop">
-          </a>
-        </div>
-
         <nav class="main-navigation">
-          <ul>
-            <li>
-              <a href="#">Каталог</a>
-              <ul>
-                <li><a href="#"><b>Новинки</b></a></li>
-                <li><a>Сливочное</a></li>
-                <li><a href="#">Щербеты</a></li>
-                <li><a href="#">Фруктовый лёд</a></li>
-                <li><a href="#">Мелорин</a></li>
+          <div class="header-logo">
+            <a href="index.html">
+              <img src="img/logo.png" width="154" height="64" alt="GllacyShop">
+            </a>
+          </div>
+          <ul class="main-menu">
+            <li class="main-menu_catalog">
+              <a class="active" href="#">Каталог</a>
+              <ul class="sub-menu">
+                <li class="sub-menu_new"><a href="#"><b>Новинки</b></a></li>
+                <li class="sub-menu_cream active"><a href="catalog.html">Сливочное</a></li>
+                <li class="sub-menu_sherbet"><a href="#">Щербеты</a></li>
+                <li class="sub-menu_fruit"><a href="#">Фруктовый лёд</a></li>
+                <li class="sub-menu_melorin"><a href="#">Мелорин</a></li>
               </ul>
             </li>
-            <li>
+            <li class="main-menu_delivery">
               <a href="#">Доставка и оплата</a>
             </li>
-            <li>
+            <li class="main-menu_about">
               <a href="#">О Компании</a>
             </li>
           </ul>
@@ -36,23 +37,25 @@
 
         <div class="user-block">
           <ul>
-            <li>
-              <a href="#">ПОИСК</a>
+            <li class="user-search">
+              <a href="#"></a>
               <form class="search" action="#" method="get">
                 <input type="search" name="search" placeholder="Что ищем?">
               </form>
             </li>
-            <li>
+            <li class="user-enter">
               <a href="#">Вход</a>
-              <form class="enter" action="#" method="get">
+              <form class="enter" action="#" method="post"> 
                 <input type="email" name="email" autocomplete="on" placeholder="Электронная почта">
                 <input type="password" name="password" placeholder="Пароль">
                 <input class="btn" type="submit" value="Войти">
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
+                <div class="login-help">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </div>
               </form>
             </li>
-            <li>
+            <li class="user-basket">
               <a href="#">2 товара</a>
               <div class="basket">
                 <table>
