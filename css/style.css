@@ -130,7 +130,7 @@ body {
   text-decoration: none;
 }
 
-.main-menu_item > a:not(.active a)::after{
+.main-menu_item > a:not(.active)::after{
   content: '';
   display: block;
   height: 1px;
@@ -185,7 +185,7 @@ body {
   position: relative;
 }
 
-.sub-menu li:first-child ::after {
+.sub-menu li:first-child::after {
   content: '';
 	position: absolute;
   top: 40px;
@@ -439,6 +439,7 @@ body {
 }
 
 .header-contacts span {
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 16px;
 }
