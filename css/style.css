@@ -26,9 +26,9 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-font-family: 'Roboto', 'Arial', sans-serif;  
+  font-family: 'Roboto', 'Arial', sans-serif;  
   color: #ffffff;
-   background-color: #849d8f;
+  background-color: #849d8f;
 }
 
 .clearfix::after {
@@ -39,7 +39,7 @@ font-family: 'Roboto', 'Arial', sans-serif;
 }
 
 .container {
-background-color: #849d8f;
+  background-color: #849d8f;
   background-repeat: no-repeat;
   background-position: top center;
 
@@ -67,17 +67,17 @@ background-color: #849d8f;
   padding: 0 25px;
 }
 
- /* body::after { */
-	/* content: ''; */
-	/* position: absolute; */
-  /* top: 0; */
-	/* left: 0; */
-	/* opacity: 0.5; */
+/* body::after {
+	content: '';
+	position: absolute;
+  top: 0;
+	left: 0;
+	opacity: 0.5;
   
-  /* width: 100%; */
-	/* min-height: 100%; */
-	 /* background: url('../gllacy-index-1200.jpg') no-repeat center 0;  */
-/* }  */
+  width: 100%;
+	min-height: 100%;
+	 background: url('../gllacy-index-1200.jpg') no-repeat center 0; 
+} */
 
 .page-header {
   position: relative;
@@ -88,15 +88,13 @@ background-color: #849d8f;
 .main-navigation {
   float: left;
   
-  /*width: 600px;*/
-  
   font-weight: 700;
   line-height: 18px;
 }
 
 .main-menu {
   float: left;
-  max-width: 433px;
+  max-width: 500px;
 }
 
 .header-logo {  
@@ -113,18 +111,35 @@ background-color: #849d8f;
   list-style: none;
 }
 
+.main-navigation .main-menu {
+  margin-top: 13px;
+}
+
 .main-menu > li {
   display: inline-block;
-  margin-top: 15px;
+  
   vertical-align: top;
 }
 
 .main-menu a {
   display: block;
   
-  padding: 5px 12px;
+  padding: 7px 12px;
   
   color: #ffffff;
+  text-decoration: none;
+}
+
+.main-menu_item > a:not(.active)::after{
+  content: '';
+  display: block;
+  height: 1px;
+  background: #ffffff;
+  opacity: 0.4;
+}
+
+.main-menu .main-menu_item {
+  padding-bottom: 20px;
 }
 
 .main-menu .active {
@@ -133,34 +148,29 @@ background-color: #849d8f;
   border-radius: 20px;
 }
 
-.main-menu_catalog a:hover,
-.main-menu_delivery a:hover,
-.main-menu_about a:hover {
+.main-menu_item a:hover {
   color: #333333;
-  text-decoration: none;
   background-color: #f7f6f3;
   border-radius: 20px;
 }
 
-.main-menu_catalog > a:active,
-.main-menu_delivery a:active,
-.main-menu_about a:active {
+.main-menu_item a:active {
   color: #333333;
-  text-decoration: none;
   background-color: rgba(248, 247, 244, 0.988);
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
 }
 
+
 .sub-menu { 
   position: absolute;
 
-  /*left: 120px;
-  top: 55px;*/
-  z-index: 2;
+  left: 180px;
+  top: 60px;
+  z-index: 4;
   
   display: none;
   width: 145px;
-  padding-left: 10px;
+  
   
   font-weight: 400;
   font-size: 14px;
@@ -172,27 +182,45 @@ background-color: #849d8f;
 }
 
 .sub-menu li:first-child {
-  border-bottom: 1px solid lightgrey;
+  position: relative;
+}
+
+.sub-menu li:first-child ::after {
+  content: '';
+	position: absolute;
+  top: 40px;
+  right: 10px;
+	left: 7px;
+  
+  display: block;
+  height: 1px;
+  background-color: rgba(210, 209, 205, 1);
 }
 
 .sub-menu a {
-  padding: 10px 15px;
+  padding: 8px 20px;
   text-decoration: none;
   color: #323232;
+}
+
+.sub-menu li:first-child a{
+  padding-bottom: 11px;
+  padding-top: 11px;
+}
+
+.sub-menu li:last-child a{
+  padding-bottom: 11px;
 }
 
 .main-menu li:first-child:hover .sub-menu {
   display: block;
 }
 
-/*.sub-menu .active a {   пыталась сделать как в стайлгайде при наведении и появлении субменю
-  color: white;
-}*/
-
 .sub-menu a:hover {
   color: #323232;
   background: #fbded7;
   border-radius: 0;
+  box-shadow: none;
 }
 
 .sub-menu a:active {
@@ -200,18 +228,16 @@ background-color: #849d8f;
   background: #f6b5a5;
 }
 
-.sub-menu .active { /*стайлгайд "находимся на странице"*/
+.sub-menu .active { 
   border-radius: 0;
+  color: #ffffff;
 }
 
-
-/* C маргинами тоже что-то по-разному везде 
-у меня была пляска с ними чтоб подогнать под макет*/
 .user-block {  
   float: right;
   
   max-width: 350px;
-  margin-top: 15px;
+  margin-top: 13px;
   
   font-weight: 500;
   font-size: 14px;
@@ -231,84 +257,74 @@ background-color: #849d8f;
   display: inline-block;
   vertical-align: top;
 
-  margin-left: 8px;
-  background-color: rgba(234, 234, 234, 0.2);
-  border-radius: 17px;
-  background-position: 15px 7px;
+  margin-left: 7px;
+  padding-bottom: 10px;
 }
 
 .user-block li:first-child {
   margin-left: 0;
 }
 
-.user-block a {
+.user-search > a,
+.user-enter  > a,
+.user-basket > a {
   display: block;
   text-decoration: none;
   
+  padding: 7px 15px 8px 45px;
   color: #ffffff;
+  background-color: rgba(234, 234, 234, 0.2);
+  background-image: url('../img/icons/search.png');
+  background-repeat: no-repeat;
+  background-position: 10px 7px;
+  border-radius: 20px;
 }
 
-.user-block .user-enter,
-.user-block .user-basket {
-  padding: 8px 15px 8px 45px;
+.user-search  a {
+  height: 32px;
+  width: 32px;
+  padding: 0;
 }
 
-.user-block li:last-child a {
-  padding-right: 20px;
+.user-basket a {
+  padding-right: 35px;
 }
 
-
-/* а зачем на ли, если можно на а?
- у меня не получается по-друому, чтоб при наведении
- текст был черный
-
- .user-block a:hover{ так он чернеет только при наведении на сам текст
-  color: #323232;
-}*/
-
-
-.user-block li:hover a{
-  color: #323232;
-}
-
-/* по логике это все ссылка */
-.user-block li:hover {
+.user-search a:hover,
+.user-enter > a:hover,
+.user-basket > a:hover {
+  color: #323232; 
   background-color: rgba(234, 234, 234, 1);
-  border-radius: 17px;
+  background-repeat: no-repeat;
+}
+
+.user-search a {
+  background-position: 8px 7px;
+}
+
+.user-search a:hover {
+  background-image: url('../img/icons/search1.png');
+  background-position: 8px 7px;
+}
+
+.user-enter > a {
+  background-image: url('../img/icons/enter.png');
+  background-position: 19px 7px;
+}
+
+.user-enter > a:hover {
+  background-image: url('../img/icons/enter1.png');
+  background-position: 19px 7px;
+}
+
+.user-basket > a {
+  background-image: url('../img/icons/basket.png');
   background-position: 15px 7px;
 }
 
-.user-block li:first-child {
-  background-position: 10px 7px;
-}
-
-/* Не вижу смысла в высоте. тогда блок сжимается*/
-.user-search {
-  /*height: 18px;*/
-  width: 18px;
-  padding: 8px;
-  
-  background: url('../img/icons/search.png') no-repeat;
-}
-
-.user-search:hover {
-  background: url('../img/icons/search1.png') no-repeat;
-}
-
-.user-enter {
-  background: url('../img/icons/enter.png') no-repeat;
-}
-
-.user-enter:hover {
-  background: url('../img/icons/enter1.png') no-repeat;
-}
-
-.user-basket {
-  background: url('../img/icons/basket.png') no-repeat;
-}
-
-.user-basket:hover {
-  background: url('../img/icons/basket1.png') no-repeat;
+.user-basket > a:hover {
+  background-image: url('../img/icons/basket1.png');
+  background-position: 15px 7px;
 }
 
 .user-block form {
@@ -319,9 +335,9 @@ background-color: #849d8f;
 
 .search {
   position: absolute;
-  top: 33px;
+  top: 35px;
   right: 0;
-  z-index: 2;
+  z-index: 4;
   
   display: none;
   width: 310px;
@@ -335,7 +351,8 @@ background-color: #849d8f;
   display: block;
   box-sizing: border-box;
   width: 100%;
-  height: 45px;  
+  height: 45px;
+  padding-left: 15px;
 
   font-size: 14px;
   line-height: 24px;
@@ -347,36 +364,32 @@ background-color: #849d8f;
   display: block;
 }
 
-/* От этого нет смысла сейчас даже. согласна но баскет есть на
-странице каталога*/
 .basket {
-  display: none;
-}
-
-
-/* Оьычно при ховере вешается блок просто.
-не поняла*/
-.user-basket:hover .basket {
   position: absolute;
-  top: 33px;
+  top: 35px;
   right: 0;
-  z-index: 2;
+  z-index: 4;
   
-  display: block;
+  display: none;
   width: 505px;
   height: 205px;
   padding: 20px 15px 20px 20px;
   
+  color: #323232;
   background-color: rgb(248, 247, 243); 
   border-radius: 10px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4); 
 }
 
+.user-basket:hover .basket {
+  display: block;
+}
+
 .enter {
   position: absolute;
-  top: 33px;
+  top: 35px;
   right: 0;
-  z-index: 2;
+  z-index: 4;
   
   display: none;
   width: 246px;
@@ -397,47 +410,45 @@ background-color: #849d8f;
   width: 100%;
   height: 45px;
   margin-bottom: 20px;
+  padding-left: 15px;
   border-radius: 5px;
 }
 
-.enter .login-help {
+.enter .enter-help {
   float: right;
   width: 120px;
   margin-top: 5px;
 }
 
-.login-help  a {
+.enter-help  a {
   color: #323232;
   font-size: 13px;
   line-height: 24px;
   text-decoration: underline;
 }
 
-/* Я на нее даже навести не могу. это мы о чем?*/
 .header-contacts {
   position: absolute;
-  top: 70px;
-  right: 25px;
+  top: 68px;
+  right: 26px;
 
   width: 170px;
 
   font-weight: 700;
-  /* выравнивание*/
+  text-align: right;
 }
 
 .header-contacts span {
-  /* margin-left: 20px; */
   font-size: 14px;
   line-height: 16px;
 }
 
-/* зачем флоат? я не знала как выровнять у меня мозг утек*/
 .header-contacts a {
-  float: right;
   font-size: 22px;
   line-height: 24px;
   text-decoration: none;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 /* index */
@@ -445,8 +456,8 @@ background-color: #849d8f;
 .slider {
   position: relative; 
   
-  margin-bottom: 25px;
-  padding-top: 315px;
+  margin-bottom: 40px;
+  padding-top: 305px;
   
   text-align: center;
   color: #ffffff;
@@ -459,20 +470,20 @@ background-color: #849d8f;
 .slider-title {
 	width: 700px;
 	margin: 0 auto;
-	margin-bottom: 35px;
+	margin-bottom: 30px;
 
 	font-weight: 700;
 	font-size: 60px;
 	line-height: 60px;
 }
 
-.slider .btn {
+.btn {
   display: inline-block;
-  padding: 12px 50px;
+  padding: 12px 25px;
 
   font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
+  font-size: 18px;
+  line-height: 24px;
   vertical-align: top;
   color: #ffffff;
   text-decoration: none;
@@ -484,15 +495,23 @@ background-color: #849d8f;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
-.slider .btn:hover {
-  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%); /*взяла из демки, не поняла где они эти цвета достали из фш*/
+.slide .btn  {
+  padding: 12px 40px;
+  
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%); 
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.slider .btn:active {
+.btn:active {
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
+
 
 .slider .slide1 {
   position: absolute;
@@ -519,7 +538,7 @@ background-color: #849d8f;
   display: inline-block;
   width: 17px;
   height: 17px;
-  margin-right: 8px;
+  margin-right: 10px;
 
   vertical-align: top;
 
@@ -550,7 +569,6 @@ background-color: #849d8f;
   background-image: url('../img/slider/slide3.png');
 }
 
-
 #btn-1:checked ~ .container label[for="btn-1"],
 #btn-2:checked ~ .container label[for="btn-2"],
 #btn-3:checked ~ .container label[for="btn-3"] {
@@ -561,28 +579,6 @@ background-color: #849d8f;
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
-.btn {
-  padding: 12px 20px;
-  
-  
-  font: inherit;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 18px;
-	line-height: 24px;
-  
-  text-decoration: none;
-  background-color: #ec593c;
-  border-radius: 25px;
-}
-
-.btn:hover {
-  /* linear-gradient  */
-}
-
-.btn:active {
-  
-}
 
 .benefit {
   margin-bottom: 40px;
@@ -626,12 +622,12 @@ background-color: #849d8f;
 
 .benefit .benefit-1 {
   background: url('../img/benefit1.jpg') no-repeat;
-  border-radius: 15px;
+  border-radius: 17px;
 }
 
 .benefit .benefit-2 {
   background: url('../img/benefit2.jpg') no-repeat;
-  border-radius: 15px;
+  border-radius: 17px;
 }
 
 .catalog {
