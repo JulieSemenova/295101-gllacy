@@ -329,8 +329,13 @@ body {
   background-position: 15px 7px;
 }
 
-.user-basket > a:hover {
+.basket-full> a:hover {
   background-image: url('../img/icons/basket1.png');
+  background-position: 15px 7px;
+}
+
+.basket-empty> a:hover {
+  background-image: url('../img/icons/basket2.png');
   background-position: 15px 7px;
 }
 
