@@ -130,7 +130,7 @@ body {
   text-decoration: none;
 }
 
-.main-menu_item > a:not(.active)::after{
+.main-menu_item > a:not(.active a)::after{
   content: '';
   display: block;
   height: 1px;
@@ -142,7 +142,7 @@ body {
   padding-bottom: 20px;
 }
 
-.main-menu .active {
+.main-menu .active > a{
   background-color: rgb(208, 112, 88);
   text-decoration: none;
   border-radius: 20px;
@@ -216,6 +216,11 @@ body {
   display: block;
 }
 
+.sub-menu .active > a{ 
+  border-radius: 0;
+  color: #ffffff;
+}
+
 .sub-menu a:hover {
   color: #323232;
   background: #fbded7;
@@ -226,11 +231,6 @@ body {
 .sub-menu a:active {
   color: #323232;
   background: #f6b5a5;
-}
-
-.sub-menu .active { 
-  border-radius: 0;
-  color: #ffffff;
 }
 
 .user-block {  
