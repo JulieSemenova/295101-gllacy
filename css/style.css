@@ -452,8 +452,8 @@ body {
   z-index: 4;
   
   /* display: none; */
-  width: 505px;
-  padding: 20px 15px 20px 20px;
+  width: 510px;
+  padding: 20px 15px;
   
   color: #323232;
   font-weight: 400;
@@ -474,31 +474,33 @@ body {
 
 td {
   margin: 0;
-  padding: 0;
   padding-top: 10px;
-  /* border: 1px solid red; */
+  padding-right: 12px;
+
+  /*outline: 1px solid black;*/
+              
   vertical-align: top;
 }
 
 .basket-delete a {
   position: relative;
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 
 .basket-delete a::before,
 .basket-delete a::after {
   content: '';
   position: absolute;
-  top: 0;
-  
+  top: -2px;
+  right: 2px;
+
   display: block;
-  width: 2px;
-  height: 16px;
+  width: 1px;
+  height: 14px;
 
   transform: rotate(45deg);
-
   background-color: #323232;
 }
 
@@ -513,21 +515,15 @@ td {
 .basket-photo {
   padding-top: 0;
   text-align: center;
-  width: 55px;
 }
 
 .basket-name {  
   width: 220px;
-  padding-right: 30px;
 }
 
-.basket-prise {
-  width: 100px;
-  padding-right: 20px;
-}
-
+.basket-prise,
 .basket-cost {
-  width: 70px;
+  padding-left: 15px;
 }
 
 .basket a:not(.btn){
