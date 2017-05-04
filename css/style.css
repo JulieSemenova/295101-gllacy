@@ -480,6 +480,32 @@ td {
   vertical-align: top;
 }
 
+.basket-delete a {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+.basket-delete a::before,
+.basket-delete a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  
+  display: block;
+  width: 2px;
+  height: 16px;
+
+  transform: rotate(45deg);
+
+  background-color: #323232;
+}
+
+.basket-delete a::after {
+  transform: rotate(-45deg);
+}
+
 .basket-item {
   height: 55px;
 }
@@ -703,6 +729,7 @@ td {
   margin: 0;
   padding: 0;
   padding-top: 10px;
+  padding-bottom: 45px;
 }
 
 .benefit-item {
@@ -723,9 +750,7 @@ td {
 }
 
 .benefit-item .btn {
-  position: absolute;
-  right: 40px;
-  bottom: 35px;
+  float: right;
 }
 
 .benefit .benefit-1 {
@@ -744,6 +769,8 @@ td {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  margin-bottom: 40px;
 }
 
 .catalog-item {
@@ -752,15 +779,18 @@ td {
   /*height: 361px;*/
 }
 
-/* .catalog-item::after { */
-  /* position: absolute;   */
-  /* display: none; */
-  /* content: ''; */
-  /* width: 295px;   */
-  /* height: 405px; */
-  /* background-color: rgba(255, 255, 255, 0.2); */
-  /* border-radius: 5px; */
-/* } */
+ .catalog-item::after { 
+   position: absolute;
+  top: -7px; 
+  left: -13px; 
+   display: none; 
+   content: '';
+
+   width: 295px;   
+   height: 405px; 
+   background-color: rgba(255, 255, 255, 0.3); 
+   border-radius: 7px; 
+ } 
 
 .catalog-item .btn {
   position: absolute;
@@ -775,7 +805,7 @@ td {
   display: block;
 }
 
-.catalog-item:hover .catalog-item::before {
+.catalog-item:hover .catalog-item::after {
   display: block;
 }
 
@@ -795,11 +825,12 @@ td {
 
 .item-price {
   position: absolute;
-  bottom: 100px;
+  top: 210px;
   
   font-weight: 700;
   font-size: 45px;
 	line-height: 45px;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .item-name {
@@ -813,13 +844,13 @@ td {
   /* text-decoration: underline; */
 }
 
-/* .item-name::after{ */
-  /* content: ''; */
-  /* display: block; */
-  /* height: 1px; */
-  /* background: #ffffff; */
-  /* opacity: 0.2; */
-/* } */
+/*.item-name::after{ 
+  сontent: ''; 
+  display: block; 
+  height: 1px; 
+   background: #ffffff; 
+   opacity: 0.2; 
+ } */
 
 .about-us {
   min-height: 260px;
@@ -891,7 +922,7 @@ td {
 
  .news-item a {
   color: #323232;
-  
+
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
