@@ -1049,18 +1049,25 @@ td {
 }
 
 .breadcrumbs li {
+  position: relative;
   display: inline-block;
   vertical-align: top;
+
+  padding-right: 18px;
   
   font-size: 14px;
   line-height: 16px;
+}
+
+.breadcrumbs li:last-child {
+  padding-right: 0;
 }
 
 .breadcrumbs li::after { 
 	content: '»';
 	position: absolute;
   top: 0;
-	left: 0;
+	right: 5px;
 	opacity: 0.5;
 }
 
