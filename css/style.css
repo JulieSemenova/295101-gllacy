@@ -967,18 +967,24 @@ td {
 }
 
 .news .subscription {   
+  width: 550px;
+  height: 210px;
+  padding: 6px;
   color: #5a5a5a;
 
   background: #f8f7f4;
-  /* border: 5px solid black; */
-  /* border-image: url('../img/news2.png') 5 round repeat; */
+  background-image: url('../img/news2.png');
+  border-radius: 15px;
+}
+
+.subscription-content {
+  background: #f8f7f4;
   border-radius: 15px;
 }
 
 .subscription-title {
   margin: 0;
-  padding-top: 10px;
-  padding-left: 10px;
+  padding: 30px 20px;
   padding-bottom: 35px;
 
   font-weight: 400;
@@ -987,9 +993,10 @@ td {
 }
 
 .subscription input:not(.btn) {
-  width: 335px;
+  width: 340px;
   height: 40px;
-  margin-left: 10px;
+  margin-bottom: 35px;
+  margin-left: 20px;
   padding: 1px 13px;
   
   font-weight: 400;
@@ -1002,7 +1009,11 @@ td {
 
 .subscription .btn {
   float: right;
+  margin-right: 20px;
   padding: 10px 18px;
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .map {
