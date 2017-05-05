@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'Roboto';
   src: url('../fonts/web/roboto.woff') format('woff');
   font-weight: 400;
@@ -15,7 +15,7 @@
   src: url('../fonts/web/robotobold.woff') format('woff');
   font-weight: 700;
 }
-
+*/
 
 body {
   position: relative;
@@ -777,21 +777,6 @@ td {
   text-align: center;
 }
 
- .item-name::after { /*фон*/
-  position: absolute;
-  top: -7px; 
-  left: -13px; 
-  z-index: 2; 
-  content: '';
-  
-  width: 295px;   
-  height: 405px; 
-  
-  background-color: rgb(255, 255, 255);
-  opacity: 0;
-  border-radius: 7px;
-} 
-
 .catalog-item:hover .btn {
   display: block;
 }
@@ -839,6 +824,25 @@ td {
   font-weight: 500;
 }
 
+.item-name::after { /*фон*/
+  position: absolute;
+  top: -7px; 
+  left: -13px; 
+  z-index: 2; 
+  content: '';
+  
+  width: 295px;   
+  height: 405px; 
+  
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+  border-radius: 7px;
+} 
+
+.catalog-item::hover ~ .item-name {
+  border-bottom: none;
+}
+
 /* .catalog-item::hover .item-name {    /*убрать подчеркивание при наведении*/
   /* border-bottom: 1px solid rgba(255, 255, 255, 0); */
 /* } */
@@ -858,6 +862,7 @@ td {
   /* min-height: 250px; */
   margin-bottom: 40px;
   padding: 20px;
+  padding-bottom: 22px;
 
   color: #323232;
   
@@ -889,7 +894,7 @@ td {
 
   width: 480px;
   margin-right: 30px;
-  padding-top: 25px;
+  padding-top: 22px;
   padding-left: 55px;
 }
 
@@ -941,22 +946,24 @@ td {
   font-weight: 500;
 }
 
- .news-title {
-  display: block;
-  width: 295px;
-  color: #323232;
-
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-}
-
 .news .blog {
   color: #323232;
 
   background-color: #ffffff;
   background: url('../img/news1.jpg') no-repeat;
   border-radius: 15px;
+}
+
+.news-title {
+  display: block;
+  width: 295px;
+  margin-top: 5px;
+  color: #323232;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  white-space: pre-wrap;
 }
 
 .news .subscription {   
@@ -1039,6 +1046,7 @@ td {
 
 .shop-header {
   min-height: 65px;
+  padding-top: 12px;
 }
 
 .breadcrumbs ul {
@@ -1085,11 +1093,20 @@ td {
 }
 
 .main-sorting {
-  width: 870px; /*870*/
+  width: 870px; 
   min-height: 135px;
   margin-bottom: 35px;
   
   background-color: lightgreen;
+}
+
+h1{
+  margin: 0;
+  padding: 0;
+
+  font-size: 35px;
+  line-height: 41px;
+
 }
 
 .main-sorting fieldset {
