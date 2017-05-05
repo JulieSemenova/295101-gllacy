@@ -843,9 +843,9 @@ td {
   border-bottom: none;
 }
 
-/* .catalog-item::hover .item-name {    /*убрать подчеркивание при наведении*/
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0); */
-/* } */
+.catalog-item:hover > .item-name {
+  border-bottom: none;
+}
 
 .catalog-item .btn {
   position: absolute;
