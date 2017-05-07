@@ -1140,24 +1140,46 @@ h1 {
 .paginator {
   min-height: 35px;
   margin: 0;
-  padding: 25px 0;
+  padding-top: 80px;
   list-style: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: right;
 }
 
 .paginator li {
   display: inline-block;
-  
   vertical-align: top;
+
+  
+  text-align: center;
 }
 
 .paginator a {
   display: block;
-  
-  /*padding: 7px 12px;
-  
+  width: 17px;
+  height: 17px;
+  padding: 4px;
   color: #ffffff;
-  text-decoration: none;*/
+  border-radius: 50%;
+  text-decoration: none;
 }
+
+.paginator a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.paginator .active,
+.paginator a:active {
+  color: #323232;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+
+
 
 
 .page-footer {
