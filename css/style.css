@@ -1029,6 +1029,7 @@ td {
 }
 
 .contacts p {
+  display: block;
   margin: 0;
 }
 
@@ -1036,6 +1037,19 @@ td {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+}
+
+.contacts-adress {
+  padding-bottom: 20px;
+}
+
+.contacts-phone {
+  padding-bottom: 25px;
+}
+
+.contacts-phone a {
+  color: #323232;
+  text-decoration: none;
 }
 
 .contacts .btn {
@@ -1232,6 +1246,7 @@ h1 {
   margin-right: 9px;
   border: 2px solid #c2cec7;
   border-radius: 50%;
+  opacity: 0.8;
 
 }
 
@@ -1252,10 +1267,11 @@ h1 {
 }
 
 .social-btn:hover {
-  opacity: 1.2;
+  opacity: 1;
 }
 
 .social-btn:active {
+  opacity: 0.988;
   box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 1);
 }
 
