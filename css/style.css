@@ -1140,7 +1140,7 @@ h1 {
 .paginator {
   min-height: 35px;
   margin: 0;
-  padding-top: 80px;
+  padding-top: 40px;
   list-style: none;
 
   font-weight: 500;
@@ -1152,8 +1152,6 @@ h1 {
 .paginator li {
   display: inline-block;
   vertical-align: top;
-
-  
   text-align: center;
 }
 
@@ -1171,10 +1169,44 @@ h1 {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.paginator .active,
+.paginator .active > a,
 .paginator a:active {
   color: #323232;
   background-color: rgba(255, 255, 255, 1);
+}
+
+.paginator .prev {
+  margin-right: 8px;
+}
+
+.paginator .next {
+  margin-left: 10px;
+}
+
+.paginator .prev > a {
+  padding: 4px 0;
+  background-image: url('../img/icons/prev.png');
+  background-repeat: no-repeat;
+  background-position: center 5px;
+}
+
+.paginator .next > a {
+  width: 10px;
+  padding: 4px 0;
+  background-image: url('../img/icons/next.png');
+  
+  background-repeat: no-repeat;
+  background-position: center 5px;
+}
+
+.paginator .disabled > a {
+  cursor: default;
+  opacity: 0.2;
+}
+
+.paginator .next > a:hover,
+.paginator .prev > a:hover {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 
