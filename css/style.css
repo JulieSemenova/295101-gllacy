@@ -853,7 +853,7 @@ td {
   /* min-height: 250px; */
   margin-bottom: 40px;
   padding: 20px;
-  padding-bottom: 22px;
+  padding-bottom: 25px;
 
   color: #323232;
   
@@ -1018,7 +1018,7 @@ td {
   width: 255px;
   min-height: 255px;  
   margin-top: 60px;
-  padding: 30px 25px;
+  padding: 30px 25px 20px 25px;
   
   color: #323232;
   font-weight: 400;
@@ -1029,7 +1029,6 @@ td {
 }
 
 .contacts b {
-  font-weight: 700;
   font-size: 18px;
 }
 
@@ -1297,8 +1296,46 @@ h1 {
 .extra-info {
   float: left;
   
-  width: 380px;
+  width: 350px;
   min-height: 50px;
+  padding-top: 15px;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.extra-info ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.extra-info li {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 5px;
+  margin-right: 20px;
+  padding-left: 22px;
+}
+
+.extra-info a {
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.extra-info .special {
+  margin-right: 6px;
+  background: url('../img/icons/heart.png') no-repeat 0 0;
+}
+
+.extra-info a::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #ffffff;
+  opacity: 0.2;
 }
 
 .copyright {
