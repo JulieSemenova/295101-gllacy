@@ -708,7 +708,7 @@ input[name='toggle'] {
 
 
 .benefit {
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 
 .benefit-item {
@@ -767,7 +767,7 @@ input[name='toggle'] {
 .catalog-item {
   position: relative;
   width: 269px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   /*padding: 6px 14px 20px;*/
   
   text-align: center;
@@ -812,8 +812,11 @@ input[name='toggle'] {
 
 .item-name {
   min-height: 53px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-weight: 500;
+}
+
+.item-name span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .catalog-item::after { 
@@ -1033,12 +1036,17 @@ input[name='toggle'] {
   background: url('../img/map.jpg') no-repeat center 0;
 }
 
+.map .center {
+  position: relative;
+}
+
 .contacts {
-  float: right;
+  position: absolute;
+  top: 60px;
+  right: 27px;
   
   width: 255px;
-  min-height: 255px;  
-  margin-top: 60px;
+  min-height: 255px;
   padding: 30px 25px 20px 25px;
   
   color: #323232;
@@ -1056,12 +1064,13 @@ input[name='toggle'] {
 .contacts-adress {
   width: 230px;
   margin: 0;
-  padding-bottom: 17px;
+  margin-bottom: 17px;
 }
 
 .adress-title {
   display: block;
   width: 150px;
+  padding-bottom: 2px;
 }
 
 .contacts-adress b {
@@ -1070,14 +1079,14 @@ input[name='toggle'] {
 
 .contacts-phone {
   margin: 0;
-  padding-bottom: 23px;
+  margin-bottom: 23px;
   line-height: 22px;
 }
 
 .phone-title {
   display: block;
   width: 175px;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 .contacts-phone a {
@@ -1292,8 +1301,8 @@ h1 {
   vertical-align: middle;
   width: 32px;
   height: 32px;
-  margin-right: 9px;
-  border: 2px solid #dae2de;
+  margin-right: 8px;
+  border: 3px solid #dae2de;
   border-radius: 50%;
   opacity: 0.8;
 }
