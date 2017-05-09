@@ -1235,6 +1235,56 @@ h1 {
   width: 705px;
 }
 
+.main-sorting .fill label {
+  position: relative;
+  padding-right: 22px;
+  padding-left: 29px;
+}
+
+.main-sorting input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-indicator {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  cursor: pointer;
+}
+
+.main-sorting input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: -4px;
+
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+.main-sorting input[type="checkbox"]:checked + .checkbox-indicator::before,
+.main-sorting input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 6px;
+
+  width: 10px;
+  height: 2px;
+
+  background-color: #ffffff;
+  transform: rotate(-45deg);
+}
+
+.main-sorting input[type="checkbox"]:checked + .checkbox-indicator::before {
+  top: 9px;
+  left: 3px;
+
+  width: 6px;
+  height: 2px;
+  transform: rotate(45deg);
+}
+
 .main-sorting .btn {
   display: inline-block;
   
