@@ -1207,11 +1207,11 @@ h1 {
   border: none;
 }
 
-.main-sorting .parameter{
+.sorting-parameter {
   width: 195px;
 }
 
-.main-sorting .price {
+.sorting-price {
   width: 200px;
 }
 
@@ -1226,9 +1226,17 @@ h1 {
   opacity: 0.2;
 }
 
-.main-sorting .fat {
+.sorting-fat {
   /* width: 415px;  */
   margin-right: 0;
+}
+
+.sorting-fat label {
+  position: relative;
+  margin-right: 20px;
+  margin-left: 30px;
+
+  cursor: pointer;
 }
 
 .radiobtn-indicator {
@@ -1240,11 +1248,20 @@ h1 {
   background-color: red;
 }
 
-.main-sorting .fill {
+.main-sorting input[type="radio"] + .radiobtn-indicator {
+  position: absolute;
+  top: 0;
+  left: -31px;
+
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.sorting-fill {
   width: 705px;
 }
 
-.main-sorting .fill label {
+.sorting-fill label {
   position: relative;
   margin-right: 22px;
   margin-left: 28px;
