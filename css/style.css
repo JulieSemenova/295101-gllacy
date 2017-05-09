@@ -1291,6 +1291,11 @@ h1 {
   border-radius: 4px;
 }
 
+.main-sorting input[type="checkbox"] + .checkbox-indicator:hover {
+  
+}
+
+
 .main-sorting input[type="checkbox"]:checked + .checkbox-indicator::before,
 .main-sorting input[type="checkbox"]:checked + .checkbox-indicator::after {
   content: "";
@@ -1657,8 +1662,10 @@ h1 {
 
 .feedback input:hover,
 .feedback textarea:hover {
-  border-width: 2px;
-  border-color: rgb(154, 154, 154);
+  outline: 2px solid rgb(154, 154, 154);
+  overflow: hidden;
+  /*border-width: 1px;
+  border-color: rgb(154, 154, 154);*/
 }
 
 .feedback input:focus,
