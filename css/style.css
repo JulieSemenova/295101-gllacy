@@ -1231,6 +1231,15 @@ h1 {
   margin-right: 0;
 }
 
+.radiobtn-indicator {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  cursor: pointer;
+  background-color: red;
+}
+
 .main-sorting .fill {
   width: 705px;
 }
@@ -1238,10 +1247,11 @@ h1 {
 .main-sorting .fill label {
   position: relative;
   padding-right: 22px;
-  padding-left: 29px;
+  padding-left: 28px;
 }
 
-.main-sorting input[type="checkbox"] {
+.main-sorting input[type="checkbox"],
+.main-sorting input[type="radio"] {
   display: none;
 }
 
