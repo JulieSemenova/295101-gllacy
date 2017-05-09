@@ -1536,13 +1536,17 @@ h1 {
 }
 
 .modal-content {
-  position: absolute;
-  top: 338px;
-  left: 365px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   z-index: 30;
 
   width: 430px;
   height: 400px;
+
+  margin-top: -120px;
+  margin-left: -250px;
+
   padding: 25px;
   background-color: #f8f7f4;
   border-radius: 10px;
@@ -1595,7 +1599,7 @@ h1 {
 
 .feedback span {
   display: inline-block;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: #323232;
   font-weight: 500;
   font-size: 24px;
@@ -1605,8 +1609,8 @@ h1 {
 .feedback input:not(.btn) {
   display: block;
   box-sizing: border-box;
-  width: 60%;
-  height: 40px;
+  width: 62%;
+  height: 43px;
   margin-bottom: 20px;
   padding: 1px 13px;
   
@@ -1622,7 +1626,7 @@ h1 {
 .feedback textarea {
   width: 415px;
   height: 145px;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   padding: 0;
   padding-top: 10px;
   padding-left: 13px;  
