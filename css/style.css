@@ -613,7 +613,6 @@ td {
 }
 
 .user-block input:focus {
-  /*outline-offset: inherit;*/
   border-width: 2px;
   border-color: rgb(46, 136, 228);
 }
@@ -1648,7 +1647,7 @@ h1 {
   width: 62%;
   height: 43px;
   margin-bottom: 20px;
-  padding: 1px 13px;
+  padding-left: 13px;
   
   font: inherit;
   font-weight: 400;
@@ -1660,6 +1659,7 @@ h1 {
 }
 
 .feedback textarea {
+  box-sizing: border-box;
   width: 415px;
   height: 145px;
   margin-bottom: 17px;
@@ -1676,10 +1676,8 @@ h1 {
 
 .feedback input:hover,
 .feedback textarea:hover {
-  outline: 2px solid rgb(154, 154, 154);
+  border: 2px solid rgb(154, 154, 154);
   overflow: hidden;
-  /*border-width: 1px;
-  border-color: rgb(154, 154, 154);*/
 }
 
 .feedback input:focus,
