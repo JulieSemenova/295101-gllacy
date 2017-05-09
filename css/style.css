@@ -1246,8 +1246,10 @@ h1 {
 
 .main-sorting .fill label {
   position: relative;
-  padding-right: 22px;
-  padding-left: 28px;
+  margin-right: 22px;
+  margin-left: 28px;
+
+  cursor: pointer;
 }
 
 .main-sorting input[type="checkbox"],
@@ -1266,7 +1268,7 @@ h1 {
 .main-sorting input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
   top: 0;
-  left: -4px;
+  left: -31px;
 
   border: 1px solid #ffffff;
   border-radius: 4px;
