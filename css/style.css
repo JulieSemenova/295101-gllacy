@@ -1233,8 +1233,8 @@ h1 {
 
 .sorting-fat label {
   position: relative;
-  margin-right: 20px;
-  margin-left: 30px;
+  margin-right: 17px;
+  margin-left: 29px;
 
   cursor: pointer;
 }
@@ -1245,7 +1245,6 @@ h1 {
   height: 18px;
 
   cursor: pointer;
-  background-color: red;
 }
 
 .main-sorting input[type="radio"] + .radiobtn-indicator {
@@ -1254,6 +1253,19 @@ h1 {
   left: -31px;
 
   border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.main-sorting input[type="radio"]:checked + .radiobtn-indicator::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: #ffffff;
   border-radius: 50%;
 }
 
