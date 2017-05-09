@@ -253,6 +253,7 @@ body {
   border: 0;
   border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  cursor: pointer;
 }
 
 .user-block {  
@@ -603,6 +604,18 @@ td {
   text-decoration: none;
   color: #ffffff;
   white-space: nowrap;
+}
+
+
+.user-block input:hover {
+  border-width: 2px;
+  border-color: rgb(154, 154, 154);
+}
+
+.user-block input:focus {
+  /*outline-offset: inherit;*/
+  border-width: 2px;
+  border-color: rgb(46, 136, 228);
 }
 
 /* index */
@@ -1029,6 +1042,16 @@ input[name='toggle'] {
   font: inherit;
   font-weight: 700;
   font-size: 18px;
+}
+
+.subscription-content input:hover {
+  border-width: 2px;
+  border-color: rgb(154, 154, 154);
+}
+
+.subscription-content input:focus {
+  border-width: 2px;
+  border-color: rgb(46, 136, 228);
 }
 
 .map {
