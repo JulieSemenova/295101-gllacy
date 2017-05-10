@@ -845,7 +845,7 @@ input[name='toggle'] {
 
 .catalog-item::after { 
   position: absolute;
-  top: -7px; 
+  top: -5px; 
   left: -13px; 
   z-index: 2; 
   content: '';
@@ -1208,7 +1208,7 @@ input[name='toggle'] {
 
 h1 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   font-size: 35px;
   line-height: 41px;
@@ -1217,7 +1217,7 @@ h1 {
 .main-sorting {
   width: 875px; 
   min-height: 135px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   
   font-weight: 500;
 }
@@ -1236,8 +1236,8 @@ h1 {
 }
 
 .main-sorting legend {
-  margin-bottom: 5px;
-  margin-left: 15px;
+  margin-bottom: 6px;
+  margin-left: 16px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -1248,7 +1248,8 @@ h1 {
 }
 
 .sorting-overlay {
-  padding: 7px 18px;
+  padding: 9px 19px;
+  padding-bottom: 7px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 30px;
 }
@@ -1258,9 +1259,10 @@ h1 {
 }
 
 .sorting-parameter select {
-  padding: 7px 15px;
-  padding-right: 3px;
-  padding-left: 11px;
+  padding-top: 9px;
+  padding-right: 33px;
+  padding-bottom: 7px;
+  padding-left: 16px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   font: inherit;
@@ -1278,8 +1280,6 @@ h1 {
   color: #000000;
 }
 
-
-
 .sorting-price {
   width: 200px;
 }
@@ -1295,20 +1295,20 @@ h1 {
 
 .range-controls .scale {
  height: 5px;
- margin-top: 8px;
+ margin-top: 9px;
  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .range-controls .bar {
   height: 5px;
   width: 55%;
-  margin-left: 20px;
+  margin-left: 25px;
   background-color: rgba(255, 255, 255, 1);
 }
 
 .toggle {
   position: absolute;
-  top: 7px;
+  top: 8px;
   left: 0;
   width: 21px;
   height: 21px;
@@ -1320,11 +1320,11 @@ h1 {
 }
 
 .toggle-min {
-  left: 35px;
+  left: 37px;
 }
 
 .toggle-max {
-  left: 132px;
+  left: 134px;
 }
 
 .main-sorting .sorting-fat {
@@ -1334,8 +1334,7 @@ h1 {
 .sorting-fat label {
   position: relative;
   margin-right: 17px;
-  margin-left: 29px;
-
+  margin-left: 28px;
   cursor: pointer;
 }
 
@@ -1345,8 +1344,8 @@ h1 {
 
 .radiobtn-indicator {
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 
   cursor: pointer;
 }
@@ -1368,8 +1367,8 @@ h1 {
 .main-sorting input[type="radio"]:checked + .radiobtn-indicator::before {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 4px;
+  left: 4px;
   
   width: 10px;
   height: 10px;
@@ -1379,8 +1378,8 @@ h1 {
 }
 
 .main-sorting input[type="radio"]:checked + .radiobtn-indicator:hover::before {
-  top: 2px;
-  left: 2px;
+  top: 3px;
+  left: 3px;
 }
 .sorting-fill {
   width: 705px;
@@ -1388,9 +1387,8 @@ h1 {
 
 .sorting-fill label {
   position: relative;
-  margin-right: 22px;
-  margin-left: 28px;
-
+  margin-right: 20px;
+  margin-left: 29px;
   cursor: pointer;
 }
 
@@ -1401,15 +1399,15 @@ h1 {
 
 .checkbox-indicator {
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 
   cursor: pointer;
 }
 
 .main-sorting input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  top: 0;
+  top: -1px;
   left: -31px;
 
   box-sizing: border-box;
@@ -1426,8 +1424,8 @@ h1 {
 .main-sorting input[type="checkbox"]:checked + .checkbox-indicator::after {
   content: "";
   position: absolute;
-  top: 7px;
-  left: 5px;
+  top: 8px;
+  left: 6px;
 
   width: 10px;
   height: 2px;
@@ -1437,8 +1435,8 @@ h1 {
 }
 
 .main-sorting input[type="checkbox"]:checked + .checkbox-indicator::before {
-  top: 8px;
-  left: 2px;
+  top: 9px;
+  left: 3px;
 
   width: 6px;
   
@@ -1446,13 +1444,13 @@ h1 {
 }
 
 .main-sorting input[type="checkbox"]:checked + .checkbox-indicator:hover::before{
-  top: 7px;
-  left: 1px;
+  top: 8px;
+  left: 2px;
 }
 
 .main-sorting input[type="checkbox"]:checked + .checkbox-indicator:hover::after{
-  top: 6px;
-  left: 4px;
+  top: 7px;
+  left: 5px;
 }
 
 .main-sorting input[type="checkbox"]:disabled + .checkbox-indicator,
@@ -1463,18 +1461,18 @@ h1 {
 }
 
 .main-sorting input[type="checkbox"]:disabled + .checkbox-indicator:hover::after {
-  top: 7px;
-  left: 5px;
-}
-
-.main-sorting input[type="checkbox"]:disabled + .checkbox-indicator:hover::before {
   top: 8px;
   left: 2px;
 }
 
-.main-sorting input[type="radio"]:disabled + .radiobtn-indicator:hover::before {
-  top: 3px;
+.main-sorting input[type="checkbox"]:disabled + .checkbox-indicator:hover::before {
+  top: 9px;
   left: 3px;
+}
+
+.main-sorting input[type="radio"]:disabled + .radiobtn-indicator:hover::before {
+  top: 4px;
+  left: 4px;
 }
 
 .disabled {
@@ -1483,7 +1481,7 @@ h1 {
 
 .sorting-btn {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 22px;
   padding: 7px 26px;
 
   font: inherit;
@@ -1552,11 +1550,11 @@ h1 {
 }
 
 .paginator .prev {
-  margin-right: 8px;
+  margin-right: 7px;
 }
 
 .paginator .next {
-  margin-left: 10px;
+  margin-left: 14px;
 }
 
 .paginator .prev > a {
