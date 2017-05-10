@@ -42,14 +42,17 @@
             <li class="user-search">
               <a href="#"></a>
               <form class="search" action="#" method="get">
-                <input type="search" name="search" placeholder="Что ищем?">
+                <input type="search" name="search" id="search" placeholder="Что ищем?">
+                <label for="search">Что ищем?</label>
               </form>
             </li>
             <li class="user-enter">
               <a href="#">Вход</a>
               <form class="enter" action="#" method="post"> 
-                <input type="email" name="email" autocomplete="on" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
+                <input type="email" name="email" autocomplete="on" id="email" placeholder="Электронная почта">
+                <label for="email">Электронная почта</label>
+                <input type="password" name="password" id="password" placeholder="Пароль">
+                <label for="password">Пароль</label>
                 <input class="btn" type="submit" value="Войти">
                 <div class="enter-help">
                   <a href="#">Забыли пароль?</a>
@@ -145,7 +148,7 @@
           </section>
 
           <article class="about-us">
-            <h2>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
+            <h2>Магазин Глейси – это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
             <ul class="clearfix">
               <li class="about-item about-1">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
               </li>
@@ -166,7 +169,8 @@
               <div class="subscription-content">
                 <p class="subscription-title">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                 <form action="#" method="post">
-                  <input type="text" name="email" placeholder="Электронная почта">
+                  <input type="email" name="email" autocomplete="on" id="email2" placeholder="Электронная почта">
+                  <label for="email2">Электронная почта</label>
                   <input class="btn" type="submit" value="Отправить">
                 </form>
               </div>
@@ -227,9 +231,12 @@
         </button>
         <form class="feedback" action="#" method="post">
           <span>Мы обязательно вам ответим!</span>
-          <input type="text" name="name" autocomplete="on" placeholder="Как вас зовут?">
-          <input type="email" name="email" autocomplete="on" placeholder="Ваша почта для ответа?">
-          <textarea  placeholder="Напишите что-нибудь..."></textarea>
+          <input type="text" name="name" autocomplete="on" id="name" placeholder="Как вас зовут?">
+          <label for="name">Как вас зовут?</label>
+          <input type="email" name="email" autocomplete="on" id="email-3" placeholder="Ваша почта для ответа">
+          <label for="email-3">Ваша почта для ответа</label>
+          <textarea placeholder="Напишите что-нибудь..." id="text"></textarea>
+          <label for="text">Напишите что-нибудь...</label>
           <input class="btn" type="submit" value="Отправить">
         </form>
       </div>
