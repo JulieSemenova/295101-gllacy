@@ -868,11 +868,10 @@ input[name='toggle'] {
 .catalog-item .btn {
   position: absolute;
   left: 35px;
-  bottom: -55px;
+  bottom: -45px;
   z-index: 20;
-  
-  display: none;
-  padding: 11px 22px;
+   display: none; 
+  padding: 11px 14px;
   border-radius: 20px;
 }
 
