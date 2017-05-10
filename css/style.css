@@ -285,8 +285,6 @@ body {
 }
 
 .user-block input:not(.btn) {
-  position: relative;
-  
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -316,8 +314,8 @@ body {
 .user-block label {
   position: absolute;
   top: 7px;
-  left: 29px;
   display: none;
+  margin-left: 14px;
   color: #5b9ddf;
   font-size: 11px;
   line-height: 13px;
@@ -624,9 +622,6 @@ td {
   color: #ffffff;
   white-space: nowrap;
 }
-
-
-
 
 /* index */
 
@@ -999,7 +994,8 @@ input[name='toggle'] {
   color: #e84d37;
 }
 
-.news .subscription {   
+.news .subscription {  
+
   width: 550px;
   /* height: 206px; */
   padding: 6px;
@@ -1011,13 +1007,17 @@ input[name='toggle'] {
 }
 
 .subscription-content {
-  padding: 30px 20px;
-  padding-bottom: 32px;
+  position: relative;
+  padding-top: 29px;
+  padding-left: 22px;
+  padding-bottom: 34px;
+  padding-right: 20px;
   background: #f8f7f4;
   border-radius: 15px;
 }
 
 .subscription-title {
+
   margin: 0;
   margin-bottom: 35px;
   
@@ -1027,7 +1027,6 @@ input[name='toggle'] {
 }
 
 .subscription input:not(.btn) {
-  position: relative;
   box-sizing: border-box;
   width: 72%;
   height: 43px;
@@ -1056,8 +1055,10 @@ input[name='toggle'] {
 
 .subscription label {
   position: absolute;
-  bottom: 706px;
-  right: 486px;
+  position: absolute;
+  bottom: 38%;
+  left: 0;
+  margin-left: 35px;
   display: none;
   color: #5b9ddf;
   font-size: 11px;
