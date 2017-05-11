@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Онлайн и офлайн магазин по продаже мороженого собственного производства на развес">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
@@ -40,7 +41,7 @@
         <div class="user-block">
           <ul>
             <li class="user-search">
-              <a href="#"></a>
+              <a href="#" title="Корзина"></a>
               <form class="search" action="#" method="get">
                 <input type="search" name="search" id="search" placeholder="Что ищем?">
                 <label for="search">Что ищем?</label>
@@ -49,9 +50,9 @@
             <li class="user-enter">
               <a href="#">Вход</a>
               <form class="enter" action="#" method="post"> 
-                <input type="email" name="email" autocomplete="on" id="email" placeholder="Электронная почта">
+                <input type="email" name="email" autocomplete="on" id="email" placeholder="Электронная почта" required>
                 <label for="email">Электронная почта</label>
-                <input type="password" name="password" id="password" placeholder="Пароль">
+                <input type="password" name="password" id="password" placeholder="Пароль" required>
                 <label for="password">Пароль</label>
                 <input class="btn" type="submit" value="Войти">
                 <div class="enter-help">
@@ -185,7 +186,7 @@
               </p>
               <p class="contacts-phone"><span class="phone-title">Для заказов по телефону:</span><b><a href="tel:+78124502525">8 812 450-25-25</a></b>(с 10 до 20 ежедневно)
               </p>
-              <a class="btn" href="#">Форма обратной связи</a>
+              <a class="btn login" href="form.html">Форма обратной связи</a>
             </section>
           </div>
         </div>
@@ -217,7 +218,7 @@
         </section>
 
         <address class="copyright">
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <a href="https://htmlacademy.ru/intensive/htmlcss" title="Переход на старницу HTML Academy">
             <img src="img/academy_logo.png" width="108" height="38" alt="htmlacademy.ru">
           </a>
           <span>
@@ -231,11 +232,11 @@
         </button>
         <form class="feedback" action="#" method="post">
           <span>Мы обязательно вам ответим!</span>
-          <input type="text" name="name" autocomplete="on" id="name" placeholder="Как вас зовут?">
+          <input type="text" name="name" autocomplete="on" id="name" placeholder="Как вас зовут?" required>
           <label for="name">Как вас зовут?</label>
-          <input type="email" name="email" autocomplete="on" id="email-3" placeholder="Ваша почта для ответа">
+          <input type="email" name="email" autocomplete="on" id="email-3" placeholder="Ваша почта для ответа" required>
           <label for="email-3">Ваша почта для ответа</label>
-          <textarea placeholder="Напишите что-нибудь..." id="text"></textarea>
+          <textarea placeholder="Напишите что-нибудь..." id="text" required></textarea>
           <label for="text">Напишите что-нибудь...</label>
           <input class="btn" type="submit" value="Отправить">
         </form>
