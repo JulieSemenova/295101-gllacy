@@ -1,5 +1,6 @@
 var link = document.querySelector(".login");
 var popup = document.querySelector(".modal-content");
+var overlay = document.querySelector(".modal-overlay");
 var close = popup.querySelector(".modal-content-close");
 var login = popup.querySelector("[name=login]");
 var form = popup.querySelector("form");
@@ -10,6 +11,7 @@ var storage = localStorage.getItem("login");
 link.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.add("modal-content-show");
+  overlay.classList.add("modal-overlay-show");
 });
 
 if (storage) {
@@ -24,6 +26,7 @@ close.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.remove("modal-content-show");
   popup.classList.remove("modal-error");
+  overlay.classList.remove("modal-overlay-show");
 });
 
 form.addEventListener("submit", function(event) {

@@ -26,8 +26,7 @@ body {
   background-position: top center;
 
   -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
-
-  transition: background-image 0.5s ease, background-color 0.5s ease;
+          transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
 .container::before,
@@ -50,18 +49,6 @@ body {
   margin: 0 auto;
   padding: 0 27px;
 }
-
-/* body::after { */
-  /* content: ''; */
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  /* opacity: 0.5; */
-  
-  /* width: 100%; */
-  /* min-height: 100%; */
-   /* background: url('../gllacy-catalog-1200.jpg') no-repeat center 0;  */
- /* }   */
 
 .page-header {
   position: relative;
@@ -2023,6 +2010,10 @@ h1 {
 
   background: rgb(0, 0, 0);
   opacity: 0.302;
+}
+
+.modal-overlay-show {
+  display: block;
 }
 
 
