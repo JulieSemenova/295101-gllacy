@@ -44,6 +44,7 @@
 }
 
 .center {
+  position: relative;
   width: 1150px;
   margin: 0 auto;
   padding: 0 27px;
@@ -618,9 +619,6 @@ td {
   color: #ffffff;
   white-space: nowrap;
 }
-
-/* index */
-
 .slider {
   position: relative; 
   
@@ -753,7 +751,7 @@ input[name='toggle'] {
 
 .benefit-item p {
   margin: 0;
-  padding-bottom: 46px;
+  padding-bottom: 43px;
 }
 
 .benefit-item:nth-child(2n) {
@@ -892,7 +890,6 @@ input[name='toggle'] {
 .about-us {
   margin-bottom: 40px;
   padding: 25px 20px;
-  padding-bottom: 23px;
 
   color: #323232;
   
@@ -921,8 +918,8 @@ input[name='toggle'] {
   vertical-align: top;
   width: 480px;
   
-  margin-right: 26px;
-  padding-top: 24px;
+  margin-right: 23px;
+  padding-top: 23px;
   padding-left: 58px;
 }
 
@@ -1005,7 +1002,6 @@ input[name='toggle'] {
 .news .subscription {  
 
   width: 550px;
-  /* height: 206px; */
   padding: 6px;
   color: #5a5a5a;
 
@@ -1026,7 +1022,7 @@ input[name='toggle'] {
 
 .subscription-title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   
   font-weight: 400;
   font-size: 16px;
@@ -1086,27 +1082,21 @@ input[name='toggle'] {
 }
 
 .map {
-  min-height: 430px;
+  height: 430px;
+  margin-bottom: 8px;
   
   background: url('../img/map.jpg') no-repeat center 0;
 }
 
-.map .center {
-  position: relative;
-}
-
-/*.map-interactive {
-  margin: 0 auto;
-}*/
 
 .contacts {
   position: absolute;
-  top: 64px;
+  bottom: -409px;
   right: 27px;
   
   width: 255px;
   min-height: 255px;
-  padding: 30px 25px 20px 25px;
+  padding: 25px 25px 20px 25px;
   
   color: #323232;
   font-weight: 400;
@@ -1123,7 +1113,7 @@ input[name='toggle'] {
 .contacts-adress {
   width: 230px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .adress-title {
@@ -1138,7 +1128,7 @@ input[name='toggle'] {
 
 .contacts-phone {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   line-height: 22px;
 }
 
@@ -1158,7 +1148,6 @@ input[name='toggle'] {
   padding: 10px 28px;;
 }
 
-/* catalog */
 
 .shop-header {
   min-height: 65px;
@@ -1237,10 +1226,9 @@ h1 {
 .main-sorting fieldset {
   display: inline-block;
   
-  /* height: 60px; */
   margin: 0;
   margin-right: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
   padding: 0;
   vertical-align: top;
  
@@ -1360,7 +1348,6 @@ h1 {
   position: relative;
   
   margin-right: 45px;
-  /* margin-left: 28px; */
   cursor: pointer;
 }
 
@@ -1413,12 +1400,12 @@ h1 {
 
 .sorting-fill label {
   position: relative;
-  margin-right: 49px;
+  margin-right: 50px;
   cursor: pointer;
 }
 
 .sorting-fill label:last-child {
-   margin-right: 22px;
+   margin-right: 18px;
 }
 
 .main-sorting input[type="checkbox"],
@@ -1516,7 +1503,7 @@ h1 {
 .sorting-btn {
   display: inline-block;
   margin-top: 22px;
-  padding: 6px 26px;
+  padding: 7px 27px;
 
   font: inherit;
   font-weight: 500;
@@ -1549,8 +1536,8 @@ h1 {
 .paginator {
   min-height: 35px;
   margin: 0;
-  margin-bottom: 20px;
-  padding-top: 40px;
+  margin-bottom: 28px;
+  padding-top: 42px;
   list-style: none;
 
   font-weight: 500;
@@ -1621,7 +1608,7 @@ h1 {
 
 .page-footer {
   min-height: 65px;
-  padding-top: 20px;
+  padding-top: 12px;
   padding-bottom: 20px;
 }
 
@@ -1635,7 +1622,7 @@ h1 {
   
   width: 250px;
   min-height: 100px;
-  padding-top: 15px;
+  padding-top: 16px;
   margin-right: 150px;
 }
 
@@ -2064,4 +2051,3 @@ label[for='text'] {
   font-weight: 400;
   line-height: 24px;
 }
-
