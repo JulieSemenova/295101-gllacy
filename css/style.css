@@ -217,7 +217,7 @@
 
 .btn {
   display: inline-block;
-  padding: 11px 22px;
+  padding: 12px 22px;
 
   font-weight: 700;
   font-size: 18px;
@@ -753,7 +753,7 @@ input[name='toggle'] {
 
 .benefit-item p {
   margin: 0;
-  padding-bottom: 44px;
+  padding-bottom: 46px;
 }
 
 .benefit-item:nth-child(2n) {
@@ -922,7 +922,7 @@ input[name='toggle'] {
   width: 480px;
   
   margin-right: 26px;
-  padding-top: 22px;
+  padding-top: 24px;
   padding-left: 58px;
 }
 
@@ -966,6 +966,7 @@ input[name='toggle'] {
   margin-right: 26px;
   padding: 25px 20px;
   padding-top: 23px;
+  padding-bottom: 28px;
 }
 
 .news-item:nth-child(2n) {
@@ -987,7 +988,7 @@ input[name='toggle'] {
 .news-title {
   display: block;
   width: 295px;
-  margin-top: 3px;
+  margin-top: 6px;
   color: #323232;
 
   font-weight: 700;
@@ -1025,7 +1026,7 @@ input[name='toggle'] {
 
 .subscription-title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   
   font-weight: 400;
   font-size: 16px;
@@ -1093,6 +1094,10 @@ input[name='toggle'] {
 .map .center {
   position: relative;
 }
+
+/*.map-interactive {
+  margin: 0 auto;
+}*/
 
 .contacts {
   position: absolute;
@@ -1224,7 +1229,7 @@ h1 {
 .main-sorting {
   width: 875px; 
   min-height: 135px;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
   
   font-weight: 500;
 }
@@ -1259,7 +1264,7 @@ h1 {
 .sorting-overlay {
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-left: 46px;
+  padding-left: 47px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 30px;
 }
@@ -1273,7 +1278,7 @@ h1 {
   width: 193px;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-left: 10px;
+  padding-left: 15px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   font: inherit;
@@ -1300,10 +1305,12 @@ h1 {
 .range-controls {
   position: relative;
   
-  width: 195px;
+  width: 205px;
   height: 21px;
-  padding: 7px 15px;
+  padding-top: 7px;
   padding-right: 0;
+  padding-bottom: 7px;
+  padding-left: 15px;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
 }
