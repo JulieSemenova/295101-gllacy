@@ -1,4 +1,22 @@
-﻿body {
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/web/roboto.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/web/robotomedium.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/web/robotobold.woff') format('woff');
+  font-weight: 700;
+}
+
+body {
   position: relative;
   
   min-width: 1200px;
@@ -11,6 +29,18 @@
   color: #ffffff;
   background-color: #849d8f;
 }
+
+/* body::after { */
+	/* content: ''; */
+	/* position: absolute; */
+  /* top: 0; */
+	/* left: 0; */
+	/* opacity: 0.5; */
+  
+  /* width: 100%; */
+	/* min-height: 100%; */
+	 /* background: url('../gllacy-catalog-1200.jpg') no-repeat center 0;  */
+ /* }   */
 
 .clearfix::after {
   content: '';
@@ -1300,10 +1330,9 @@ h1 {
 .range-controls {
   position: relative;
   
-  width: 195px;
+  width: 190px;
   height: 21px;
   padding: 7px 15px;
-  padding-right: 0;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -1311,7 +1340,6 @@ h1 {
 .range-controls .scale {
   height: 5px;
   margin-top: 9px;
-  margin-right: 15px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
