@@ -545,12 +545,12 @@ td {
   padding-left: 15px;
 }
 
-.basket a:not(.btn){
+.basket a:not(.btn) {
   color: #323232;
   text-decoration: none;
 }
 
-.basket span{
+.basket span {
   color: #323232;
   opacity: 0.5;
 }
@@ -712,9 +712,9 @@ input[name='toggle'] {
   background-image: url('../img/slider/slide3.png');
 }
 
-#btn-1:checked ~ .container label[for="btn-1"],
-#btn-2:checked ~ .container label[for="btn-2"],
-#btn-3:checked ~ .container label[for="btn-3"] {
+#btn-1:checked ~ .container label[for='btn-1'],
+#btn-2:checked ~ .container label[for='btn-2'],
+#btn-3:checked ~ .container label[for='btn-3'] {
   background-color: #ffffff;
 }
 
