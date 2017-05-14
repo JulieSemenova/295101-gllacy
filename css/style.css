@@ -1283,7 +1283,7 @@ h1 {
   border: none;
   border-radius: 100px;
   outline: none;
-  -webkit-appearance: none;
+  /*-webkit-appearance: none;*/
 }
 
 
