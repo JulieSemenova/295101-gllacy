@@ -785,7 +785,7 @@ input[name='toggle'] {
   position: relative;
   width: 269px;
   margin-right: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   
   text-align: center;
 }
@@ -1231,7 +1231,7 @@ input[name='toggle'] {
 .main-sorting {
   width: 875px; 
   min-height: 135px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   
   font-weight: 500;
 }
