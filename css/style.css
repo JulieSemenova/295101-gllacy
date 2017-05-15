@@ -914,6 +914,7 @@ input[name='toggle'] {
 }
 
 .about-us li {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 480px;
@@ -927,26 +928,33 @@ input[name='toggle'] {
   margin-right: 0;
 }
 
-.about-item {
+.about-item::before {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  content: '';
+  display: block;
+  width: 49px;
+  height: 60px;
   background-image: url('../img/sprite.png');
   background-repeat: no-repeat;
-
 }
 
-.about-1 {
+
+.about-1::before {
   background-position: -10px -432px;
 }
 
-.about-2 {
+.about-2::before {
   white-space: pre-wrap;
   background-position: -10px -501px;
 }
 
-.about-3 {
+.about-3::before {
   background-position: -10px -570px;
 }
 
-.about-4 {
+.about-4::before {
   background-position: -10px -639px;
 }
 
@@ -1006,7 +1014,7 @@ input[name='toggle'] {
   color: #5a5a5a;
 
   background: #f8f7f4;
-  background-image: url('../img/sprite.png') -10px -718px;
+  background-image: url('../img/news2.png');
   border-radius: 15px;
 }
 
@@ -1489,7 +1497,6 @@ input[name='toggle'] {
   width: 6px;
   
   -webkit-transform: rotate(45deg);
-  
           transform: rotate(45deg);
 }
 
