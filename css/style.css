@@ -361,7 +361,7 @@
 }
 
 .user-search a {
-  background-position: -3px -836px;
+  background-position: -3px -837px;
 }
 
 .user-search a:hover {
@@ -1295,30 +1295,27 @@ input[name='toggle'] {
   display: none; 
 }
 
-
-.sorting-parameter::after {
-  content: '';
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  display: block;
-  border: 4px solid #ffffff;
-  border-right-color: transparent;
-  border-bottom: none;
-  border-left-color: transparent;
-}
-
-
 .sorting-parameter select:hover {
   color: #323232;
   background-color: rgba(255, 255, 255, 1);
 }
 
-.sorting-parameter:hover::after {
-  border: 4px solid #323232;
+.sorting-parameter::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  right: 18px;
+  display: block;
+  border-width: 4px;
+  border-style: solid;
+  border-top-color: #ffffff;
   border-right-color: transparent;
-  border-bottom: none;
+  border-bottom-color: transparent;
   border-left-color: transparent;
+}
+
+.sorting-parameter:hover::after {
+  border-top-color: #323232;
 }
 
 .sorting-parameter option {
@@ -1541,7 +1538,7 @@ input[name='toggle'] {
   vertical-align: top;
 
   margin-top: 22px;
-  padding: 7px 27px;
+  padding: 6px 27px;
 
   font: inherit;
   font-weight: 500;
